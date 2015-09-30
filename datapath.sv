@@ -68,12 +68,80 @@ register mdr
     .out(MDR)
 );
 
-register ir 
+ir irunit
+(
+    .clk(clk),  
+    .load(load_ir),
+    .in(mem_wdata),
+    .opcode(opcode),
+    .dest(dest),
+    .src1(sr1),
+    .src2(sr2),
+    .offset6(offset6),
+    .offset9(offset9),
+    .ledVect12(ledVect12), 
+    .imm5(imm5),
+    .imm5_sel(imm5_sel), 
+    .offset11(offset11),
+    .jsr_sel(jsr_sel)
+);
+
+sext imm5_sext
+(
+    .in(imm5),
+    .out(imm5_op)
+);
+
+mux2 alumux
+(
+    .sel(imm5_sel), 
+    .a(sr2), 
+    .b(imm5_op),
+    .f(alumux_out)
+);
+
+alu ArithmeticLogicUnit
+(
+    .aluop(aluop),
+    .a(sr1),
+    .b(alumux_out),
+    .f(alu_out)
+
+);
+
+regfile regfileunit
 (
     .clk(clk),
-    .load(LD_IR),
-    .in(MDR),
-    .out(IR)
+    .load(load_regfile),
+    .in(regfilemux_out),
+    .src_a(storemux_out), 
+    .src_b(sr2), 
+    .dest(r7mux_out),
+    .reg_a(sr1_out), 
+    .reg_b(sr2_out)
 );
+
+gencc genccunit
+(
+    .in(regfilemux_out),
+    .out(gencc_out)
+);
+
+ register #(.width(3)) cc
+(
+    .clk(clk),
+    .load(load_cc),
+    .in(gencc_out),
+    .out(cc_out)
+);
+
+ comparator nzpcomparator
+ (
+    .a(dest),
+    .b(cc_out),
+    .f(branch_enable)
+ );
+
+
 
 endmodule : datapath
