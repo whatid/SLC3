@@ -1,5 +1,5 @@
 Analysis & Synthesis report for slc3
-Thu Oct  1 15:31:02 2015
+Thu Oct  1 18:15:23 2015
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Oct  1 15:31:02 2015           ;
+; Analysis & Synthesis Status        ; Failed - Thu Oct  1 18:15:22 2015           ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; slc3                                        ;
 ; Top-level Entity Name              ; slc3                                        ;
@@ -145,15 +145,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-24        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -163,9 +163,9 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Thu Oct  1 15:31:00 2015
+    Info: Processing started: Thu Oct  1 18:15:20 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off slc3 -c slc3
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
     Info (12023): Found entity 1: tristate
 Info (12021): Found 2 design units, including 1 entities, in source file test_memory.sv
@@ -204,23 +204,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: alu
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
     Info (12023): Found entity 1: adder
-Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(29): created implicit net for "cpu_bus"
-Error (10161): Verilog HDL error at slc3.sv(59): object "pc" is not declared File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 59
-Error (10161): Verilog HDL error at slc3.sv(61): object "marmux_out" is not declared File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 61
-Error (10161): Verilog HDL error at slc3.sv(63): object "alu_out" is not declared File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 63
-Error (10161): Verilog HDL error at slc3.sv(67): object "pc" is not declared File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 67
-Error (10897): SystemVerilog error at slc3.sv(77): can't implicitly connect port "clk" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 77
-Error (10897): SystemVerilog error at slc3.sv(77): can't implicitly connect port "load_regfile" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 77
-Error (10897): SystemVerilog error at slc3.sv(77): can't implicitly connect port "load_cc" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 77
-Error (10897): SystemVerilog error at slc3.sv(77): can't implicitly connect port "alumux_sel" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 77
-Error (10897): SystemVerilog error at slc3.sv(77): can't implicitly connect port "aluop" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 77
-Error (10897): SystemVerilog error at slc3.sv(77): can't implicitly connect port "ledVect12" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 77
-Error (10897): SystemVerilog error at slc3.sv(77): can't implicitly connect port "branch_enable" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 77
-Error (10897): SystemVerilog error at slc3.sv(93): can't implicitly connect port "ContinueIR" on instance "state_controller" of module "ISDU" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 93
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 12 errors, 1 warning
-    Error: Peak virtual memory: 361 megabytes
-    Error: Processing ended: Thu Oct  1 15:31:02 2015
-    Error: Elapsed time: 00:00:02
+Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
+    Info (12023): Found entity 1: mux4
+Error (10897): SystemVerilog error at slc3.sv(79): can't implicitly connect port "clk" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 79
+Error (10897): SystemVerilog error at slc3.sv(86): can't implicitly connect port "ledVect12" on instance "d0" of module "datapath" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 86
+Error (10897): SystemVerilog error at slc3.sv(102): can't implicitly connect port "Data_Mem_Out" on instance "memory_subsystem" of module "Mem2IO" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 102
+Error (10284): Verilog HDL Module Instantiation error at slc3.sv(112): port "alumux_sel" is not declared by module "ISDU" File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 112
+Error (10284): Verilog HDL Module Instantiation error at slc3.sv(112): port "load_cc" is not declared by module "ISDU" File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 112
+Error (10284): Verilog HDL Module Instantiation error at slc3.sv(112): port "load_regfile" is not declared by module "ISDU" File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 112
+Error (10284): Verilog HDL Module Instantiation error at slc3.sv(112): port "branch_enable" is not declared by module "ISDU" File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 112
+Error (10284): Verilog HDL Module Instantiation error at slc3.sv(113): port "aluop" is not declared by module "ISDU" File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 113
+Error (10897): SystemVerilog error at slc3.sv(109): can't implicitly connect port "ContinueIR" on instance "state_controller" of module "ISDU" - no such object is visible in the present scope File: /home/wirjo2/slc3/SLC3/slc3.sv Line: 109
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 9 errors, 0 warnings
+    Error: Peak virtual memory: 357 megabytes
+    Error: Processing ended: Thu Oct  1 18:15:23 2015
+    Error: Elapsed time: 00:00:03
     Error: Total CPU time (on all processors): 00:00:01
 
 

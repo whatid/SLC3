@@ -22,7 +22,7 @@ module ISDU ( 	input	Clk,
 									
 				input [3:0]  Opcode, 
 				input        IR_5,
-				  
+				  input logic branch_enable, 
 				output logic 	LD_MAR,
 								LD_MDR,
 								LD_IR,
@@ -41,11 +41,11 @@ module ISDU ( 	input	Clk,
 									SR1MUX, busMux, 
 				output logic 		SR2MUX,
 									ADDR1MUX,
-				output logic [1:0] 	ADDR2MUX,
-				output logic 		MARMUX,
+				output logic [1:0] 	ADDR2MUX, alumux_sel
+				output logic 		MARMUX, load_cc, load_regfile, 
 				  
 				output logic [1:0] 	ALUK,
-				  
+				  output logic [3:0] aluop, 
 				output logic 		Mem_CE,
 									Mem_UB,
 									Mem_LB,
@@ -53,7 +53,7 @@ module ISDU ( 	input	Clk,
 									Mem_WE
 				);
 
-    enum logic [3:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01}   State, Next_state;   // Internal state logic
+    enum logic [3:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01 ,S_05, S_09, S_00, S_12, S_04, S_21, S_20}   State, Next_state;   // Internal state logic
 	    
     always_ff @ (posedge Clk or posedge Reset )
     begin : Assign_Next_State
