@@ -16,16 +16,49 @@ mux3 pcmux
 (
 	.sel(PCMUX), 
 	.a(pc_plus1_out), 
-	.b(16'b0), 
-	.c(16'b0), 
-	.f(16'b0)
+	.b(cpu_bus), 
+	.c(br_adder_out), 
+	.f(pcmux_out)
+);
+
+mux2 addermux
+(
+    .sel(),
+    .a(offset9_out),
+    .b(offset11_out),
+    .f(addermux_out)
+);
+
+sext offset6_sext
+(
+    .in(offset6), 
+    .out(offset6_out)
+);
+
+sext pc_offset11
+(
+    .in(offset11), 
+    .out(offset11_out)
+);
+
+sext pc_offset9
+(
+    .in(offset9),
+    .out(offset9_out)
+);
+
+adder br_adder
+(
+    .a(addermux_out),
+    .b(pc_out),
+    .f(br_adder_out)
 );
 
 register pc
 (
     .clk(clk),
     .load(LD_PC),
-    .in(pc_plus1_out),
+    .in(pcmux_out),
     .out(pc_out)
 );
 
@@ -38,7 +71,7 @@ register pc
  mux2 marmux
  (
  	.sel(MARMUX), 
- 	.a(pc_out),
+ 	.a(br_adder_out),
  	.b(16'b0),
  	.f(marmux_out)
  );
@@ -92,31 +125,47 @@ sext imm5_sext
     .out(imm5_op)
 );
 
-mux2 alumux
+mux2 sr2mux
 (
     .sel(imm5_sel), 
-    .a(sr2), 
+    .a(sr2_out), 
     .b(imm5_op),
+    .f(sr2mux_out)
+);
+
+mux2 alumux
+(
+    .sel(alumux_sel), 
+    .a(sr2mux_out),
+    .b(offset6_out),
     .f(alumux_out)
 );
 
 alu ArithmeticLogicUnit
 (
     .aluop(aluop),
-    .a(sr1),
+    .a(sr1_out),
     .b(alumux_out),
-    .f(alu_out)
+    .f(cpu_bus)
 
+);
+
+mux2 storemux
+(
+    .sel(jsr_sel),
+    .a(sr1),
+    .b(3'b111),
+    .f(storemux_out)
 );
 
 regfile regfileunit
 (
     .clk(clk),
     .load(load_regfile),
-    .in(regfilemux_out),
+    .in(cpu_bus),
     .src_a(storemux_out), 
     .src_b(sr2), 
-    .dest(r7mux_out),
+    .dest(dest),
     .reg_a(sr1_out), 
     .reg_b(sr2_out)
 );

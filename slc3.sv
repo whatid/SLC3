@@ -50,6 +50,23 @@ logic [15:0] MAR, MDR, IR;
 logic [15:0] Data_Mem_In, Data_Mem_Out;
 
 
+// CPU BUS 
+logic [15:0] cpu_bus; 
+
+always_comb
+begin
+	if (GatePC)
+		cpu_bus = pc; 
+	else if (GateMARMUX)
+		cpu_bus = marmux_out; 
+	else if (GateALU) 
+		cpu_bus = alu_out; 
+	else if (GateMDR)
+		cpu_bus = MDR; 
+	else
+		cpu_bus = pc; 
+end
+
 // Connect MAR to ADDR, which is also connected as an input into MEM2IO
 //	MEM2IO will determine what gets put onto Data_CPU (which serves as a potential
 //	input into MDR)
