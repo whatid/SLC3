@@ -46,22 +46,26 @@ logic SR2MUX, ADDR1MUX, MARMUX, MIO_EN;
 logic BEN;
 logic [1:0] PCMUX, DRMUX, SR1MUX, ADDR2MUX, ALUK;
 logic [15:0] MDR_In;
-logic [15:0] MAR, MDR, IR, PC, ALU, MARMUX_OUT;
-logic [15:0] Data_Mem_In; 
-logic [1:0] busMux; 
+logic [15:0] MAR, MDR, IR;
+logic [15:0] Data_Mem_In, Data_Mem_Out;
+
 
 // CPU BUS 
 logic [15:0] cpu_bus; 
 
-mux4 muxforCPU_bus
-(
-	.sel(busMux),
-	.a(PC),
-	.b(Data_Mem_In),
-	.c(ALU),
-	.d(MARMUX_OUT),
-	.f(cpu_bus)
-);
+always_comb
+begin
+	if (GatePC)
+		cpu_bus = pc; 
+	else if (GateMARMUX)
+		cpu_bus = marmux_out; 
+	else if (GateALU) 
+		cpu_bus = alu_out; 
+	else if (GateMDR)
+		cpu_bus = MDR; 
+	else
+		cpu_bus = pc; 
+end
 
 // Connect MAR to ADDR, which is also connected as an input into MEM2IO
 //	MEM2IO will determine what gets put onto Data_CPU (which serves as a potential
@@ -70,27 +74,11 @@ assign ADDR = { 4'b00, MAR }; //Note, our external SRAM chip is 1Mx16, but addre
 assign MIO_EN = ~OE;
 
 // Connect everything to the data path (you have to figure out this part)
-datapath d0
-(
-	.clk, 
-	.LD_PC, .LD_MAR, .LD_MDR, .LD_IR, .load_regfile, .load_cc,  
-	.PCMUX, .DRMUX, .alumux_sel, 
-	.MARMUX, 
-	.aluop, 
-	.MDR_In, 
-	.IR, .MAR, .MDR, 
-	.ledVect12, 
-	.branch_enable, 
-	.cpu_bus(cpu_bus), 
-	.marmux_out(MARMUX_OUT), 
-	.pc_out(PC), 
-	.alu_out(ALU)
-
-);
+datapath d0 (.*);
 
 // Break the tri-state bus to the ram into input/outputs 
 tristate #(.N(16)) tr0(
-	.Clk(Clk), .OE(~WE), .In(cpu_bus), .Out(Data_Mem_In), .Data(Data)
+	.Clk(Clk), .OE(~WE), .In(Data_Mem_Out), .Out(Data_Mem_In), .Data(Data)
 );
 
 // Our SRAM and I/O controller (note, this plugs into MDR/MAR
@@ -104,7 +92,7 @@ Mem2IO memory_subsystem(
 ISDU state_controller(
 	.*, .Reset(Reset_ah), .Run(Run_ah), .Continue(Continue_ah),
 	.Opcode(IR[15:12]), .IR_5(IR[5]), .IR_11(IR[11]),
-	.Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE), .busMux(busMux)
+	.Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE)
 );
 
 endmodule

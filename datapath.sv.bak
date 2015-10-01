@@ -1,27 +1,16 @@
 module datapath
 (
 	input clk, 
-	input LD_PC, LD_MAR, LD_MDR, LD_IR, load_regfile, load_cc,  
-	input [1:0] PCMUX, DRMUX, alumux_sel, 
-	input [15:0] cpu_bus, 
+	input LD_PC, LD_MAR, LD_MDR, LD_IR, 
+	input [1:0] PCMUX, DRMUX, 
 	input MARMUX, 
-	input [3:0] aluop, 
 	input [15:0] MDR_In, 
-	output [15:0] IR, MAR, MDR, pc_out, marmux_out, alu_out, 
-	output [11:0] ledVect12, 
-	output logic branch_enable
+	output [15:0] IR, MAR, MDR
 
 );
-// internal signals
-logic [4:0] imm5; 
-logic imm5_sel, jsr_sel;
-logic [3:0] opcode; 
-logic [5:0] offset6; 
-logic [10:0] offset11; 
-logic [8:0] offset9; 
-logic [2:0] dest, sr1, sr2, storemux_out, gencc_out, cc_out; 
-logic [15:0] pc_plus1_out, mem_data, mdrmux_out, br_adder_out, offset9_out, offset11_out, addermux_out, offset6_out, pcmux_out, imm5_op, sr2_out; 
-logic [15:0] sr2mux_out, alumux_out, sr1_out; 
+
+logic pcmux_out; 
+logic [15:0] pc_out, pc_plus1_out, mem_data, marmux_out, mdrmux_out; 
 
 mux3 pcmux
 (
@@ -115,8 +104,8 @@ register mdr
 ir irunit
 (
     .clk(clk),  
-    .load(LD_IR),
-    .in(cpu_bus),
+    .load(load_ir),
+    .in(mem_wdata),
     .opcode(opcode),
     .dest(dest),
     .src1(sr1),
@@ -157,7 +146,7 @@ alu ArithmeticLogicUnit
     .aluop(aluop),
     .a(sr1_out),
     .b(alumux_out),
-    .f(alu_out)
+    .f(cpu_bus)
 
 );
 
@@ -183,7 +172,7 @@ regfile regfileunit
 
 gencc genccunit
 (
-    .in(cpu_bus),
+    .in(regfilemux_out),
     .out(gencc_out)
 );
 

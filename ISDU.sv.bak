@@ -38,7 +38,7 @@ module ISDU ( 	input	Clk,
 									
 				output logic [1:0] 	PCMUX,
 				                    DRMUX,
-									SR1MUX, busMux, 
+									SR1MUX,
 				output logic 		SR2MUX,
 									ADDR1MUX,
 				output logic [1:0] 	ADDR2MUX,
@@ -114,7 +114,7 @@ module ISDU ( 	input	Clk,
 	    LD_CC = 1'b0;
 	    LD_REG = 1'b0;
 	    LD_PC = 1'b0;
-		 busMux = 2'b00; 
+		 
 	    GatePC = 1'b0;
 	    GateMDR = 1'b0;
 	    GateALU = 1'b0;
