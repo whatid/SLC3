@@ -4,17 +4,17 @@ module datapath
 	input LD_PC, LD_MAR, LD_MDR, LD_IR, load_regfile, load_cc,  
 	input [1:0] PCMUX, DRMUX, alumux_sel, 
 	input [15:0] cpu_bus, 
-	input MARMUX, 
+	input MARMUX,
 	input [3:0] aluop, 
 	input [15:0] MDR_In, 
 	output [15:0] IR, MAR, MDR, pc_out, marmux_out, alu_out, 
 	output [11:0] ledVect12, 
-	output logic branch_enable
+	output logic branch_enable, jsr_sel
 
 );
 // internal signals
 logic [4:0] imm5; 
-logic imm5_sel, jsr_sel;
+logic imm5_sel; 
 logic [3:0] opcode; 
 logic [5:0] offset6; 
 logic [10:0] offset11; 
@@ -32,12 +32,21 @@ mux3 pcmux
 	.f(pcmux_out)
 );
 
-mux2 addermux
+mux3 adder2mux
 (
-    .sel(),
-    .a(offset9_out),
-    .b(offset11_out),
-    .f(addermux_out)
+    .sel(ADDR2MUX),
+    .a(offset11_out),
+    .b(offset9_out),
+    .c(offset6_out)
+    .f(adder2mux_out)
+);
+
+mux2 adder1mux
+(
+    .sel(ADDR1MUX), 
+    .a(pc_out),
+    .b(sr1_out),
+    .f(adder1mux_out)
 );
 
 sext offset6_sext
@@ -60,8 +69,8 @@ sext pc_offset9
 
 adder br_adder
 (
-    .a(addermux_out),
-    .b(pc_out),
+    .a(adder1mux_out),
+    .b(adder2mux_out),
     .f(br_adder_out)
 );
 

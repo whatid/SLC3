@@ -42,12 +42,11 @@ HexDriver hex_drivers[3:0] (hex_4, {HEX3, HEX2, HEX1, HEX0});
 // Internal connections
 logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED;
 logic load_regfile, load_cc; 
-logic [3:0] aluop; 
-logic branch_enable; 
+logic branch_enable, jsr_sel; 
 logic [1:0] alumux_sel; 
 logic GatePC, GateMDR, GateALU, GateMARMUX;
 logic SR2MUX, ADDR1MUX, MARMUX, MIO_EN;
-logic BEN;
+logic BEN, offset_sel; 
 logic [1:0] PCMUX, DRMUX, SR1MUX, ADDR2MUX, ALUK;
 logic [15:0] MDR_In;
 logic [15:0] MAR, MDR, IR, PC, ALU, MARMUX_OUT;
@@ -77,10 +76,10 @@ assign MIO_EN = ~OE;
 datapath d0
 (
 	.clk, 
-	.LD_PC, .LD_MAR, .LD_MDR, .LD_IR, .load_regfile, .load_cc,  
+	.LD_PC, .LD_MAR, .LD_MDR, .LD_IR, .load_regfile(LD_REG), .load_cc(LD_CC),  
 	.PCMUX, .DRMUX, .alumux_sel(alumux_sel), 
 	.MARMUX, 
-	.aluop, 
+	.aluop(ALUK), 
 	.MDR_In, 
 	.IR, .MAR, .MDR, 
 	.ledVect12, 
@@ -88,6 +87,7 @@ datapath d0
 	.cpu_bus(cpu_bus), 
 	.marmux_out(MARMUX_OUT), 
 	.pc_out(PC), 
+	.jsr_sel, 
 	.alu_out(ALU)
 
 );
@@ -109,7 +109,7 @@ ISDU state_controller(
 	.*, .Reset(Reset_ah), .Run(Run_ah), .Continue(Continue_ah),
 	.Opcode(IR[15:12]), .IR_5(IR[5]), .IR_11(IR[11]),
 	.Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE), .busMux(busMux), 
-	.alumux_sel, .load_cc, .load_regfile, .branch_enable, .aluop
+	.alumux_sel, .branch_enable, .jsr_sel
 );
 
 endmodule

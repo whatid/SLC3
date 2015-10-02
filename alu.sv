@@ -1,6 +1,6 @@
 module alu
 (
-    input logic [3:0] aluop,
+    input logic [1:0] aluop,
     input logic [15:0] a, b,
     output logic [15:0] f
 );
@@ -8,9 +8,10 @@ module alu
 always_comb
 begin
     case (aluop)
-        4'b0001: f = a + b; // add
-        4'b0101: f = a & b; // and
-        4'b1001: f = ~a; // not
+        2'b00: f = a + b; // add
+        2'b01: f = a & b; // and
+        2'b10: f = ~a; // not
+        2'b11: f = a; 
         default: $display("Unknown aluop");
     endcase
 end

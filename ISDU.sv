@@ -41,11 +41,13 @@ module ISDU ( 	input	Clk,
 									SR1MUX, busMux, 
 				output logic 		SR2MUX,
 									ADDR1MUX,
+									offset_sel, 
+
 				output logic [1:0] 	ADDR2MUX, alumux_sel
-				output logic 		MARMUX, load_cc, load_regfile, 
+				output logic 		MARMUX, 
 				  
 				output logic [1:0] 	ALUK,
-				  output logic [3:0] aluop, 
+
 				output logic 		Mem_CE,
 									Mem_UB,
 									Mem_LB,
@@ -53,7 +55,7 @@ module ISDU ( 	input	Clk,
 									Mem_WE
 				);
 
-    enum logic [3:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01 ,S_05, S_09, S_00, S_12, S_04, S_21, S_20}   State, Next_state;   // Internal state logic
+    enum logic [3:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01 ,S_05, S_09, S_00, S_12, S_04, S_21, S_20, S_22}   State, Next_state;   // Internal state logic
 	    
     always_ff @ (posedge Clk or posedge Reset )
     begin : Assign_Next_State
@@ -93,11 +95,43 @@ module ISDU ( 	input	Clk,
 				case (Opcode)
 					4'b0001 : 
 					    Next_state <= S_01;
+					4'b0101 :
+						Next_state <= S_05; 
+					4'b1001 : 
+						Next_state <= S_09;  
+					4'b0000 : 
+						Next_state <= S_00;
+					4'b1100 : 
+						Next_state = S_12; 
+					4'b0100 : 
+						Next_state = S_04;   
 					default : 
 					    Next_state <= S_18;
 				endcase
             S_01 : 
 				Next_state <= S_18;
+			S_05 : 
+				Next_state <= S_18;
+			S_09 : 
+				Next_state <= S_18; 
+			S_00 : 
+				if (branch_enable)
+					Next_state <= S_22;
+				else
+					Next_state <= S_18; 
+			S_22 : 
+				Next_state <= S_18; 
+			S_12 : 
+				Next_state <= S_18; 
+			S_04 : 
+				if (jsr_sel)
+					Next_state <= S_21;
+				else 
+					Next_state <= S_20; 
+			S_20: 
+				Next_state <= S_18; 
+			S_21: 
+				Next_state <= S_18; 
 			default : ;
 
 	     endcase
@@ -160,11 +194,46 @@ module ISDU ( 	input	Clk,
                 LD_BEN = 1'b1;
             S_01 : 
                 begin 
-					SR2MUX = IR_5;
 					ALUK = 2'b00;
 					GateALU = 1'b1;
 					LD_REG = 1'b1;
+					LD_CC = 1'b1; 
                 end
+			S_05 : 
+				begin
+					ALUK = 2'b01; 
+					GateALU = 1'b1; 
+					LD_REG = 1'b1; 
+					LD_CC = 1'b1; 
+				end
+			S_09 : 
+				begin
+					ALUK = 2'b10; 
+					GateALU = 1'b1; 
+					LD_REG = 1'b1;
+					LD_CC = 1'b1;  
+				end
+			S_00 : ; 
+			S_22 : 
+				begin
+					ADDR1MUX = 1'b0; 
+					ADDR2MUX = 2'b01; 
+					LD_PC = 1'b1; 
+					GatePC = 1'b1; 
+				end
+			S_12 : 
+				begin
+					PCMUX = 2'b01; 
+					LD_PC = 1'b1; 
+					ALUK = 2'b11; 
+					GateALU = 1'b1; 
+				end 
+			S_04 : 
+	
+			S_20: 
+			
+			S_21: 
+			
             default : ;
            endcase
        end 
