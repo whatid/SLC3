@@ -42,8 +42,9 @@ module ISDU ( 	input	Clk,
 				output logic 		SR2MUX,
 									ADDR1MUX,
 									offset_sel, 
+									jsr_sel, 
 
-				output logic [1:0] 	ADDR2MUX, alumux_sel
+				output logic [1:0] 	ADDR2MUX, alumux_sel, 
 				output logic 		MARMUX, 
 				  
 				output logic [1:0] 	ALUK,
@@ -55,7 +56,7 @@ module ISDU ( 	input	Clk,
 									Mem_WE
 				);
 
-    enum logic [3:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01 ,S_05, S_09, S_00, S_12, S_04, S_21, S_20, S_22}   State, Next_state;   // Internal state logic
+    enum logic [4:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01 ,S_05, S_09, S_00, S_12, S_04, S_21, S_20, S_22}   State, Next_state;   // Internal state logic
 	    
     always_ff @ (posedge Clk or posedge Reset )
     begin : Assign_Next_State
@@ -80,7 +81,7 @@ module ISDU ( 	input	Clk,
             S_33_2 : 
                 Next_state <= S_35;
             S_35 : 
-                Next_state <= PauseIR1;
+                Next_state <= S_32;
             PauseIR1 : 
                 if (~ContinueIR) 
                     Next_state <= PauseIR1;
@@ -228,11 +229,11 @@ module ISDU ( 	input	Clk,
 					ALUK = 2'b11; 
 					GateALU = 1'b1; 
 				end 
-			S_04 : 
+			S_04 :;  
 	
-			S_20: 
+			S_20: ; 
 			
-			S_21: 
+			S_21: ; 
 			
             default : ;
            endcase

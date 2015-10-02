@@ -2,9 +2,9 @@ module datapath
 (
 	input clk, 
 	input LD_PC, LD_MAR, LD_MDR, LD_IR, load_regfile, load_cc,  
-	input [1:0] PCMUX, DRMUX, alumux_sel, 
+	input [1:0] PCMUX, DRMUX, alumux_sel, ADDR2MUX, 
 	input [15:0] cpu_bus, 
-	input MARMUX,
+	input MARMUX, ADDR1MUX, 
 	input [3:0] aluop, 
 	input [15:0] MDR_In, 
 	output [15:0] IR, MAR, MDR, pc_out, marmux_out, alu_out, 
@@ -21,7 +21,7 @@ logic [10:0] offset11;
 logic [8:0] offset9; 
 logic [2:0] dest, sr1, sr2, storemux_out, gencc_out, cc_out; 
 logic [15:0] pc_plus1_out, mem_data, mdrmux_out, br_adder_out, offset9_out, offset11_out, addermux_out, offset6_out, pcmux_out, imm5_op, sr2_out; 
-logic [15:0] sr2mux_out, alumux_out, sr1_out; 
+logic [15:0] sr2mux_out, alumux_out, sr1_out, adder2mux_out, adder1mux_out; 
 
 mux3 pcmux
 (
@@ -37,7 +37,7 @@ mux3 adder2mux
     .sel(ADDR2MUX),
     .a(offset11_out),
     .b(offset9_out),
-    .c(offset6_out)
+    .c(offset6_out), 
     .f(adder2mux_out)
 );
 

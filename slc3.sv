@@ -50,9 +50,9 @@ logic BEN, offset_sel;
 logic [1:0] PCMUX, DRMUX, SR1MUX, ADDR2MUX, ALUK;
 logic [15:0] MDR_In;
 logic [15:0] MAR, MDR, IR, PC, ALU, MARMUX_OUT;
-logic [15:0] Data_Mem_In; 
+logic [15:0] Data_Mem_In, Data_Mem_Out; 
 logic [1:0] busMux; 
-
+logic [11:0] ledVect12; 
 // CPU BUS 
 logic [15:0] cpu_bus; 
 
@@ -75,7 +75,7 @@ assign MIO_EN = ~OE;
 // Connect everything to the data path (you have to figure out this part)
 datapath d0
 (
-	.clk, 
+	.clk(Clk), 
 	.LD_PC, .LD_MAR, .LD_MDR, .LD_IR, .load_regfile(LD_REG), .load_cc(LD_CC),  
 	.PCMUX, .DRMUX, .alumux_sel(alumux_sel), 
 	.MARMUX, 
@@ -99,15 +99,15 @@ tristate #(.N(16)) tr0(
 
 // Our SRAM and I/O controller (note, this plugs into MDR/MAR
 Mem2IO memory_subsystem(
-	.*, .Reset(Reset_ah), .A(ADDR), .Switches(S),
+	.*, .Reset(Reset_ah), .A(ADDR), .Switches(S), 
 	.HEX0(hex_4[0]), .HEX1(hex_4[1]), .HEX2(hex_4[2]), .HEX3(hex_4[3]),
 	.Data_CPU_In(MDR), .Data_CPU_Out(MDR_In)
 );
 
 // State machine, you need to fill in the code here as well
 ISDU state_controller(
-	.*, .Reset(Reset_ah), .Run(Run_ah), .Continue(Continue_ah),
-	.Opcode(IR[15:12]), .IR_5(IR[5]), .IR_11(IR[11]),
+	.*, .Reset(Reset_ah), .Run(Run_ah), .Continue(Continue_ah), .ContinueIR(1'b0), 
+	.Opcode(IR[15:12]), .IR_5(IR[5]), //.IR_11(IR[11]),
 	.Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE), .busMux(busMux), 
 	.alumux_sel, .branch_enable, .jsr_sel
 );
