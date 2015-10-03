@@ -1,5 +1,5 @@
 Analysis & Synthesis report for slc3
-Sat Oct  3 13:58:10 2015
+Sat Oct  3 14:40:51 2015
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -75,13 +75,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct  3 13:58:10 2015       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct  3 14:40:51 2015       ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; slc3                                        ;
 ; Top-level Entity Name              ; slc3                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 527                                         ;
-;     Total combinational functions  ; 363                                         ;
+; Total logic elements               ; 526                                         ;
+;     Total combinational functions  ; 362                                         ;
 ;     Dedicated logic registers      ; 227                                         ;
 ; Total registers                    ; 227                                         ;
 ; Total pins                         ; 101                                         ;
@@ -228,16 +228,16 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 527       ;
+; Estimated Total logic elements              ; 526       ;
 ;                                             ;           ;
-; Total combinational functions               ; 363       ;
+; Total combinational functions               ; 362       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 267       ;
-;     -- 3 input functions                    ; 68        ;
-;     -- <=2 input functions                  ; 28        ;
+;     -- 4 input functions                    ; 253       ;
+;     -- 3 input functions                    ; 82        ;
+;     -- <=2 input functions                  ; 27        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 318       ;
+;     -- normal mode                          ; 317       ;
 ;     -- arithmetic mode                      ; 45        ;
 ;                                             ;           ;
 ; Total registers                             ; 227       ;
@@ -248,8 +248,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 227       ;
-; Total fan-out                               ; 2198      ;
-; Average fan-out                             ; 2.72      ;
+; Total fan-out                               ; 2182      ;
+; Average fan-out                             ; 2.70      ;
 +---------------------------------------------+-----------+
 
 
@@ -258,66 +258,83 @@ applicable agreement for further details.
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
 ; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Library Name ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
-; |slc3                            ; 363 (0)           ; 227 (0)      ; 0           ; 0            ; 0       ; 0         ; 101  ; 0            ; |slc3                                      ; work         ;
+; |slc3                            ; 362 (0)           ; 227 (0)      ; 0           ; 0            ; 0       ; 0         ; 101  ; 0            ; |slc3                                      ; work         ;
 ;    |HexDriver:reg_to_hex0|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|HexDriver:reg_to_hex0                ; work         ;
 ;    |HexDriver:reg_to_hex1|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|HexDriver:reg_to_hex1                ; work         ;
 ;    |HexDriver:reg_to_hex2|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|HexDriver:reg_to_hex2                ; work         ;
 ;    |HexDriver:reg_to_hex3|       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|HexDriver:reg_to_hex3                ; work         ;
-;    |ISDU:state_controller|       ; 15 (15)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|ISDU:state_controller                ; work         ;
-;    |datapath:d0|                 ; 240 (0)           ; 179 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0                          ; work         ;
+;    |ISDU:state_controller|       ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|ISDU:state_controller                ; work         ;
+;    |datapath:d0|                 ; 243 (0)           ; 179 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0                          ; work         ;
+;       |adder:br_adder|           ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|adder:br_adder           ; work         ;
 ;       |alu:ArithmeticLogicUnit|  ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|alu:ArithmeticLogicUnit  ; work         ;
 ;       |comparator:nzpcomparator| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|comparator:nzpcomparator ; work         ;
-;       |gencc:genccunit|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|gencc:genccunit          ; work         ;
+;       |gencc:genccunit|          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|gencc:genccunit          ; work         ;
 ;       |ir:irunit|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|ir:irunit                ; work         ;
 ;       |mux2:sr2mux|              ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|mux2:sr2mux              ; work         ;
 ;       |mux2:storemux|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|mux2:storemux            ; work         ;
-;       |regfile:regfileunit|      ; 148 (148)         ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|regfile:regfileunit      ; work         ;
+;       |regfile:regfileunit|      ; 150 (150)         ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|regfile:regfileunit      ; work         ;
 ;       |register:cc|              ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|register:cc              ; work         ;
-;       |register:mar|             ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|register:mar             ; work         ;
+;       |register:mar|             ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|register:mar             ; work         ;
 ;       |register:pc|              ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|register:pc              ; work         ;
-;    |mux4:muxforCPU_bus|          ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|mux4:muxforCPU_bus                   ; work         ;
+;    |mux4:muxforCPU_bus|          ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|mux4:muxforCPU_bus                   ; work         ;
 ;    |tristate:tr0|                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|tristate:tr0                         ; work         ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |slc3|ISDU:state_controller|State                                                                                                                                                                                   ;
-+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+-------------+--------------+
-; Name         ; State.S_22 ; State.S_20 ; State.S_21 ; State.S_04 ; State.S_12 ; State.S_00 ; State.S_09 ; State.S_05 ; State.S_01 ; State.S_32 ; State.S_35 ; State.S_33_2 ; State.S_33_1 ; State.S_18 ; State.Pause ; State.Halted ;
-+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+-------------+--------------+
-; State.Halted ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 0            ;
-; State.Pause  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 1           ; 1            ;
-; State.S_18   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 1          ; 0           ; 1            ;
-; State.S_33_1 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ; 0          ; 0           ; 1            ;
-; State.S_33_2 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_35   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_32   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_01   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_05   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_09   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_00   ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_12   ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_04   ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_21   ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_20   ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-; State.S_22   ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
-+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |slc3|ISDU:state_controller|State                                                                                                                                                                                                                                                                                                   ;
++--------------+--------------+--------------+------------+------------+------------+--------------+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+-------------+--------------+
+; Name         ; State.S_16_2 ; State.S_16_1 ; State.S_23 ; State.S_07 ; State.S_27 ; State.S_25_2 ; State.S_25_1 ; State.S_06 ; State.S_22 ; State.S_20 ; State.S_21 ; State.S_04 ; State.S_12 ; State.S_00 ; State.S_09 ; State.S_05 ; State.S_01 ; State.S_32 ; State.S_35 ; State.S_33_2 ; State.S_33_1 ; State.S_18 ; State.Pause ; State.Halted ;
++--------------+--------------+--------------+------------+------------+------------+--------------+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+-------------+--------------+
+; State.Halted ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 0            ;
+; State.Pause  ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 1           ; 1            ;
+; State.S_18   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 1          ; 0           ; 1            ;
+; State.S_33_1 ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ; 0          ; 0           ; 1            ;
+; State.S_33_2 ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_35   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_32   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_01   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_05   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_09   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_00   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_12   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_04   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_21   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_20   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_22   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_06   ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_25_1 ; 0            ; 0            ; 0          ; 0          ; 0          ; 0            ; 1            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_25_2 ; 0            ; 0            ; 0          ; 0          ; 0          ; 1            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_27   ; 0            ; 0            ; 0          ; 0          ; 1          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_07   ; 0            ; 0            ; 0          ; 1          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_23   ; 0            ; 0            ; 1          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_16_1 ; 0            ; 1            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
+; State.S_16_2 ; 1            ; 0            ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ; 0          ; 0           ; 1            ;
++--------------+--------------+--------------+------------+------------+------------+--------------+--------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+--------------+--------------+------------+-------------+--------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; ISDU:state_controller|State~4         ; Lost fanout        ;
-; ISDU:state_controller|State~5         ; Lost fanout        ;
-; ISDU:state_controller|State~6         ; Lost fanout        ;
-; ISDU:state_controller|State~7         ; Lost fanout        ;
-; ISDU:state_controller|State~8         ; Lost fanout        ;
-; Total Number of Removed Registers = 5 ;                    ;
-+---------------------------------------+--------------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; ISDU:state_controller|State.S_06       ; Lost fanout        ;
+; ISDU:state_controller|State.S_25_1     ; Lost fanout        ;
+; ISDU:state_controller|State.S_25_2     ; Lost fanout        ;
+; ISDU:state_controller|State.S_27       ; Lost fanout        ;
+; ISDU:state_controller|State.S_07       ; Lost fanout        ;
+; ISDU:state_controller|State.S_23       ; Lost fanout        ;
+; ISDU:state_controller|State.S_16_1     ; Lost fanout        ;
+; ISDU:state_controller|State.S_16_2     ; Lost fanout        ;
+; ISDU:state_controller|State~4          ; Lost fanout        ;
+; ISDU:state_controller|State~5          ; Lost fanout        ;
+; ISDU:state_controller|State~6          ; Lost fanout        ;
+; ISDU:state_controller|State~7          ; Lost fanout        ;
+; ISDU:state_controller|State~8          ; Lost fanout        ;
+; Total Number of Removed Registers = 13 ;                    ;
++----------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -335,14 +352,15 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |slc3|HexDriver:reg_to_hex2|WideOr3 ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |slc3|mux4:muxforCPU_bus|Mux15      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |slc3|ISDU:state_controller|Next_state.S_07 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |slc3|HexDriver:reg_to_hex2|WideOr3         ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |slc3|mux4:muxforCPU_bus|Mux15              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -675,7 +693,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Sat Oct  3 13:58:04 2015
+    Info: Processing started: Sat Oct  3 14:40:43 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off slc3 -c slc3
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
@@ -768,7 +786,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADDR[18]" is stuck at GND
     Warning (13410): Pin "ADDR[19]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 16 input pin(s) that do not drive logic
@@ -788,15 +806,15 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "S[13]"
     Warning (15610): No output dependent on input pin "S[14]"
     Warning (15610): No output dependent on input pin "S[15]"
-Info (21057): Implemented 645 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 659 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 65 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 544 logic cells
+    Info (21061): Implemented 558 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 45 warnings
     Info: Peak virtual memory: 449 megabytes
-    Info: Processing ended: Sat Oct  3 13:58:12 2015
+    Info: Processing ended: Sat Oct  3 14:40:51 2015
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:06
 
 

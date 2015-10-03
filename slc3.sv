@@ -31,7 +31,7 @@ logic Reset_ah, Continue_ah, Run_ah;
 assign Reset_ah = ~Reset;
 assign Continue_ah = ~Continue;
 assign Run_ah = ~Run;
-assign LED = ledVect12; 
+
 
 // An array of 4-bit wires to connect the hex_drivers efficiently to wherever we want
 // For Lab 1, they will direclty be connected to the IR register through an always_comb circuit
@@ -80,6 +80,8 @@ logic [1:0] busMux;
 logic [11:0] ledVect12; 
 // CPU BUS 
 logic [15:0] cpu_bus; 
+
+assign LED = ledVect12; 
 
 mux4 muxforCPU_bus
 (
