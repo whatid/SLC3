@@ -81,7 +81,7 @@ module ISDU ( 	input	Clk,
             S_35 : 
                 Next_state <= Pause;
             Pause : 
-					if (~Continue)
+					if (Continue)
 						Next_state <= S_32; 
 					else 
 						Next_state <= Pause; 
@@ -178,7 +178,12 @@ module ISDU ( 	input	Clk,
 	    Mem_WE = 1'b1;
 		 
 	    case (State)
-			Halted: ;
+			Halted: 
+				begin
+				LD_PC = 1'b1; 
+				PCMUX = 2'b11; 
+				busMux = 2'b00; 
+				end
 			S_18 : 
 				begin
 					busMux = 2'b00; 

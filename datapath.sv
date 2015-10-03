@@ -23,12 +23,13 @@ logic [2:0] dest, sr1, sr2, storemux_out, gencc_out, cc_out;
 logic [15:0] pc_plus1_out, mem_data, mdrmux_out, br_adder_out, offset9_out, offset11_out, addermux_out, offset6_out, pcmux_out, imm5_op, sr2_out; 
 logic [15:0] sr2mux_out, alumux_out, sr1_out, adder2mux_out, adder1mux_out; 
 
-mux3 pcmux
+mux4 pcmux
 (
 	.sel(PCMUX), 
 	.a(pc_plus1_out), 
 	.b(cpu_bus), 
-	.c(br_adder_out), 
+	.c(br_adder_out),
+	.d(16'b0), 
 	.f(pcmux_out)
 );
 

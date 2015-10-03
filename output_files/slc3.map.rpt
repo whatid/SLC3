@@ -1,5 +1,5 @@
 Analysis & Synthesis report for slc3
-Sat Oct  3 14:40:51 2015
+Sat Oct  3 14:49:51 2015
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -18,7 +18,7 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: mux4:muxforCPU_bus
- 13. Parameter Settings for User Entity Instance: datapath:d0|mux3:pcmux
+ 13. Parameter Settings for User Entity Instance: datapath:d0|mux4:pcmux
  14. Parameter Settings for User Entity Instance: datapath:d0|mux3:adder2mux
  15. Parameter Settings for User Entity Instance: datapath:d0|mux2:adder1mux
  16. Parameter Settings for User Entity Instance: datapath:d0|sext:offset6_sext
@@ -47,9 +47,10 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  39. Port Connectivity Checks: "datapath:d0|sext:pc_offset9"
  40. Port Connectivity Checks: "datapath:d0|sext:pc_offset11"
  41. Port Connectivity Checks: "datapath:d0|sext:offset6_sext"
- 42. Port Connectivity Checks: "datapath:d0"
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
+ 42. Port Connectivity Checks: "datapath:d0|mux4:pcmux"
+ 43. Port Connectivity Checks: "datapath:d0"
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
 
 
 
@@ -75,7 +76,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct  3 14:40:51 2015       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct  3 14:49:51 2015       ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; slc3                                        ;
 ; Top-level Entity Name              ; slc3                                        ;
@@ -233,8 +234,8 @@ applicable agreement for further details.
 ; Total combinational functions               ; 362       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 253       ;
-;     -- 3 input functions                    ; 82        ;
-;     -- <=2 input functions                  ; 27        ;
+;     -- 3 input functions                    ; 83        ;
+;     -- <=2 input functions                  ; 26        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
 ;     -- normal mode                          ; 317       ;
@@ -248,8 +249,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 227       ;
-; Total fan-out                               ; 2182      ;
-; Average fan-out                             ; 2.70      ;
+; Total fan-out                               ; 2199      ;
+; Average fan-out                             ; 2.72      ;
 +---------------------------------------------+-----------+
 
 
@@ -343,7 +344,7 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 227   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -357,6 +358,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |slc3|datapath:d0|register:pc|data[1]       ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |slc3|ISDU:state_controller|Next_state.S_07 ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |slc3|HexDriver:reg_to_hex2|WideOr3         ;
 ; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |slc3|mux4:muxforCPU_bus|Mux15              ;
@@ -374,7 +376,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:d0|mux3:pcmux ;
+; Parameter Settings for User Entity Instance: datapath:d0|mux4:pcmux ;
 +----------------+-------+--------------------------------------------+
 ; Parameter Name ; Value ; Type                                       ;
 +----------------+-------+--------------------------------------------+
@@ -668,6 +670,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------+
+; Port Connectivity Checks: "datapath:d0|mux4:pcmux" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; d    ; Input ; Info     ; Stuck at GND             ;
++------+-------+----------+--------------------------+
+
+
 +-------------------------------------------------+
 ; Port Connectivity Checks: "datapath:d0"         ;
 +---------------+-------+----------+--------------+
@@ -683,7 +694,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -693,7 +704,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Sat Oct  3 14:40:43 2015
+    Info: Processing started: Sat Oct  3 14:49:38 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off slc3 -c slc3
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
@@ -741,7 +752,7 @@ Warning (10036): Verilog HDL or VHDL warning at slc3.sv(73): object "MIO_EN" ass
 Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:reg_to_hex0"
 Info (12128): Elaborating entity "mux4" for hierarchy "mux4:muxforCPU_bus"
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:d0"
-Info (12128): Elaborating entity "mux3" for hierarchy "datapath:d0|mux3:pcmux"
+Info (12128): Elaborating entity "mux3" for hierarchy "datapath:d0|mux3:adder2mux"
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:d0|mux2:adder1mux"
 Info (12128): Elaborating entity "sext" for hierarchy "datapath:d0|sext:offset6_sext"
 Info (12128): Elaborating entity "adder" for hierarchy "datapath:d0|adder:br_adder"
@@ -813,8 +824,8 @@ Info (21057): Implemented 659 device resources after synthesis - the final resou
     Info (21061): Implemented 558 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 45 warnings
     Info: Peak virtual memory: 449 megabytes
-    Info: Processing ended: Sat Oct  3 14:40:51 2015
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Sat Oct  3 14:49:51 2015
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:07
 
 
