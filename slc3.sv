@@ -43,7 +43,7 @@ HexDriver hex_drivers[3:0] (hex_4, {HEX3, HEX2, HEX1, HEX0});
 logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED;
 logic load_regfile, load_cc; 
 logic branch_enable, jsr_sel; 
-logic [1:0] alumux_sel; 
+logic alumux_sel; 
 logic GatePC, GateMDR, GateALU, GateMARMUX;
 logic SR2MUX, ADDR1MUX, MARMUX, MIO_EN;
 logic BEN, offset_sel; 
@@ -59,10 +59,10 @@ logic [15:0] cpu_bus;
 mux4 muxforCPU_bus
 (
 	.sel(busMux),
-	.a(PC),
-	.b(Data_Mem_In),
-	.c(ALU),
-	.d(MARMUX_OUT),
+	.a(PC), // 2'b00
+	.b(Data_Mem_In), // 2'b01
+	.c(ALU), // 2'b10
+	.d(MARMUX_OUT), // 2'b11
 	.f(cpu_bus)
 );
 
@@ -88,7 +88,9 @@ datapath d0
 	.marmux_out(MARMUX_OUT), 
 	.pc_out(PC), 
 	.jsr_sel, 
-	.alu_out(ALU)
+	.alu_out(ALU), 
+	.ADDR1MUX, 
+	.ADDR2MUX
 
 );
 

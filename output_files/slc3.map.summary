@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Oct  1 22:00:32 2015
+Analysis & Synthesis Status : Successful - Sat Oct  3 13:20:53 2015
 Quartus II 32-bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
 Revision Name : slc3
 Top-level Entity Name : slc3
 Family : Cyclone IV E
-Total logic elements : 61
-    Total combinational functions : 36
-    Dedicated logic registers : 59
-Total registers : 59
+Total logic elements : 77
+    Total combinational functions : 52
+    Dedicated logic registers : 75
+Total registers : 75
 Total pins : 101
 Total virtual pins : 0
 Total memory bits : 0

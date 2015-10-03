@@ -1,5 +1,5 @@
 Analysis & Synthesis report for slc3
-Thu Oct  1 22:00:32 2015
+Sat Oct  3 13:20:53 2015
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -17,39 +17,40 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: mux4:muxforCPU_bus
- 13. Parameter Settings for User Entity Instance: datapath:d0|mux3:pcmux
- 14. Parameter Settings for User Entity Instance: datapath:d0|mux3:adder2mux
- 15. Parameter Settings for User Entity Instance: datapath:d0|mux2:adder1mux
- 16. Parameter Settings for User Entity Instance: datapath:d0|sext:offset6_sext
- 17. Parameter Settings for User Entity Instance: datapath:d0|sext:pc_offset11
- 18. Parameter Settings for User Entity Instance: datapath:d0|sext:pc_offset9
- 19. Parameter Settings for User Entity Instance: datapath:d0|register:pc
- 20. Parameter Settings for User Entity Instance: datapath:d0|plus1:plus1unit
- 21. Parameter Settings for User Entity Instance: datapath:d0|mux2:marmux
- 22. Parameter Settings for User Entity Instance: datapath:d0|register:mar
- 23. Parameter Settings for User Entity Instance: datapath:d0|mux3:mdrmux
- 24. Parameter Settings for User Entity Instance: datapath:d0|register:mdr
- 25. Parameter Settings for User Entity Instance: datapath:d0|sext:imm5_sext
- 26. Parameter Settings for User Entity Instance: datapath:d0|mux2:sr2mux
- 27. Parameter Settings for User Entity Instance: datapath:d0|mux2:alumux
- 28. Parameter Settings for User Entity Instance: datapath:d0|mux2:storemux
- 29. Parameter Settings for User Entity Instance: datapath:d0|register:cc
- 30. Parameter Settings for User Entity Instance: tristate:tr0
- 31. Port Connectivity Checks: "ISDU:state_controller"
- 32. Port Connectivity Checks: "Mem2IO:memory_subsystem"
- 33. Port Connectivity Checks: "datapath:d0|mux2:storemux"
- 34. Port Connectivity Checks: "datapath:d0|alu:ArithmeticLogicUnit"
- 35. Port Connectivity Checks: "datapath:d0|mux2:alumux"
- 36. Port Connectivity Checks: "datapath:d0|ir:irunit"
- 37. Port Connectivity Checks: "datapath:d0|mux3:mdrmux"
- 38. Port Connectivity Checks: "datapath:d0|mux2:marmux"
- 39. Port Connectivity Checks: "datapath:d0|sext:pc_offset9"
- 40. Port Connectivity Checks: "datapath:d0|sext:pc_offset11"
- 41. Port Connectivity Checks: "datapath:d0|sext:offset6_sext"
- 42. Port Connectivity Checks: "datapath:d0"
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: mux4:muxforCPU_bus
+ 14. Parameter Settings for User Entity Instance: datapath:d0|mux3:pcmux
+ 15. Parameter Settings for User Entity Instance: datapath:d0|mux3:adder2mux
+ 16. Parameter Settings for User Entity Instance: datapath:d0|mux2:adder1mux
+ 17. Parameter Settings for User Entity Instance: datapath:d0|sext:offset6_sext
+ 18. Parameter Settings for User Entity Instance: datapath:d0|sext:pc_offset11
+ 19. Parameter Settings for User Entity Instance: datapath:d0|sext:pc_offset9
+ 20. Parameter Settings for User Entity Instance: datapath:d0|register:pc
+ 21. Parameter Settings for User Entity Instance: datapath:d0|plus1:plus1unit
+ 22. Parameter Settings for User Entity Instance: datapath:d0|mux2:marmux
+ 23. Parameter Settings for User Entity Instance: datapath:d0|register:mar
+ 24. Parameter Settings for User Entity Instance: datapath:d0|mux3:mdrmux
+ 25. Parameter Settings for User Entity Instance: datapath:d0|register:mdr
+ 26. Parameter Settings for User Entity Instance: datapath:d0|sext:imm5_sext
+ 27. Parameter Settings for User Entity Instance: datapath:d0|mux2:sr2mux
+ 28. Parameter Settings for User Entity Instance: datapath:d0|mux2:alumux
+ 29. Parameter Settings for User Entity Instance: datapath:d0|mux2:storemux
+ 30. Parameter Settings for User Entity Instance: datapath:d0|register:cc
+ 31. Parameter Settings for User Entity Instance: tristate:tr0
+ 32. Port Connectivity Checks: "ISDU:state_controller"
+ 33. Port Connectivity Checks: "Mem2IO:memory_subsystem"
+ 34. Port Connectivity Checks: "datapath:d0|mux2:storemux"
+ 35. Port Connectivity Checks: "datapath:d0|alu:ArithmeticLogicUnit"
+ 36. Port Connectivity Checks: "datapath:d0|mux2:alumux"
+ 37. Port Connectivity Checks: "datapath:d0|ir:irunit"
+ 38. Port Connectivity Checks: "datapath:d0|mux3:mdrmux"
+ 39. Port Connectivity Checks: "datapath:d0|mux2:marmux"
+ 40. Port Connectivity Checks: "datapath:d0|sext:pc_offset9"
+ 41. Port Connectivity Checks: "datapath:d0|sext:pc_offset11"
+ 42. Port Connectivity Checks: "datapath:d0|sext:offset6_sext"
+ 43. Port Connectivity Checks: "datapath:d0"
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
 
 
 
@@ -75,15 +76,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct  1 22:00:32 2015       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct  3 13:20:53 2015       ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; slc3                                        ;
 ; Top-level Entity Name              ; slc3                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 61                                          ;
-;     Total combinational functions  ; 36                                          ;
-;     Dedicated logic registers      ; 59                                          ;
-; Total registers                    ; 59                                          ;
+; Total logic elements               ; 77                                          ;
+;     Total combinational functions  ; 52                                          ;
+;     Dedicated logic registers      ; 75                                          ;
+; Total registers                    ; 75                                          ;
 ; Total pins                         ; 101                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -184,8 +185,8 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 2           ;
@@ -193,7 +194,7 @@ applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ; < 0.1%      ;
-;     Processors 3-24        ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -228,28 +229,28 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 61        ;
+; Estimated Total logic elements              ; 77        ;
 ;                                             ;           ;
-; Total combinational functions               ; 36        ;
+; Total combinational functions               ; 52        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 2         ;
-;     -- 3 input functions                    ; 15        ;
+;     -- 3 input functions                    ; 31        ;
 ;     -- <=2 input functions                  ; 19        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 6         ;
+;     -- normal mode                          ; 22        ;
 ;     -- arithmetic mode                      ; 30        ;
 ;                                             ;           ;
-; Total registers                             ; 59        ;
-;     -- Dedicated logic registers            ; 59        ;
+; Total registers                             ; 75        ;
+;     -- Dedicated logic registers            ; 75        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 101       ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 59        ;
-; Total fan-out                               ; 401       ;
-; Average fan-out                             ; 1.28      ;
+; Maximum fan-out                             ; 75        ;
+; Total fan-out                               ; 481       ;
+; Average fan-out                             ; 1.39      ;
 +---------------------------------------------+-----------+
 
 
@@ -258,13 +259,14 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; |slc3                      ; 36 (0)            ; 59 (0)       ; 0           ; 0            ; 0       ; 0         ; 101  ; 0            ; |slc3                          ; work         ;
+; |slc3                      ; 52 (0)            ; 75 (0)       ; 0           ; 0            ; 0       ; 0         ; 101  ; 0            ; |slc3                          ; work         ;
 ;    |ISDU:state_controller| ; 4 (4)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|ISDU:state_controller    ; work         ;
 ;    |datapath:d0|           ; 32 (0)            ; 37 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0              ; work         ;
 ;       |ir:irunit|          ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|ir:irunit    ; work         ;
 ;       |register:mar|       ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|register:mar ; work         ;
 ;       |register:pc|        ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|datapath:d0|register:pc  ; work         ;
-;    |tristate:tr0|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|tristate:tr0             ; work         ;
+;    |mux4:muxforCPU_bus|    ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|mux4:muxforCPU_bus       ; work         ;
+;    |tristate:tr0|          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |slc3|tristate:tr0             ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -332,73 +334,70 @@ Encoding Type:  One-Hot
 ; datapath:d0|register:mdr|data[1]       ; Lost fanout                                 ;
 ; Mem2IO:memory_subsystem|hex_data[0]    ; Stuck at GND due to stuck port clock_enable ;
 ; datapath:d0|register:mdr|data[0]       ; Lost fanout                                 ;
-; tristate:tr0|b[0..15]                  ; Lost fanout                                 ;
-; datapath:d0|ir:irunit|data[5..8]       ; Lost fanout                                 ;
-; datapath:d0|register:cc|data[2]        ; Stuck at GND due to stuck port clock_enable ;
-; datapath:d0|ir:irunit|data[11]         ; Lost fanout                                 ;
-; datapath:d0|register:cc|data[1]        ; Stuck at GND due to stuck port clock_enable ;
-; datapath:d0|ir:irunit|data[10]         ; Lost fanout                                 ;
-; datapath:d0|register:cc|data[0]        ; Stuck at GND due to stuck port clock_enable ;
-; datapath:d0|ir:irunit|data[9]          ; Lost fanout                                 ;
+; datapath:d0|register:cc|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; datapath:d0|ir:irunit|data[5..10]      ; Lost fanout                                 ;
 ; ISDU:state_controller|State.S_01       ; Lost fanout                                 ;
 ; ISDU:state_controller|State.S_05       ; Lost fanout                                 ;
 ; ISDU:state_controller|State.S_09       ; Lost fanout                                 ;
 ; ISDU:state_controller|State.S_12       ; Lost fanout                                 ;
-; ISDU:state_controller|State.S_04       ; Lost fanout                                 ;
-; ISDU:state_controller|State.S_21       ; Lost fanout                                 ;
-; ISDU:state_controller|State.S_20       ; Lost fanout                                 ;
+; ISDU:state_controller|State.S_22       ; Lost fanout                                 ;
 ; ISDU:state_controller|State~4          ; Lost fanout                                 ;
 ; ISDU:state_controller|State~5          ; Lost fanout                                 ;
 ; ISDU:state_controller|State~6          ; Lost fanout                                 ;
 ; ISDU:state_controller|State~7          ; Lost fanout                                 ;
-; ISDU:state_controller|State.S_22       ; Stuck at GND due to stuck port data_in      ;
 ; ISDU:state_controller|State.PauseIR2   ; Stuck at GND due to stuck port data_in      ;
+; ISDU:state_controller|State.S_04       ; Stuck at GND due to stuck port data_in      ;
+; datapath:d0|ir:irunit|data[11]         ; Lost fanout                                 ;
+; ISDU:state_controller|State.S_21       ; Stuck at GND due to stuck port data_in      ;
+; ISDU:state_controller|State.S_20       ; Stuck at GND due to stuck port data_in      ;
 ; ISDU:state_controller|State.PauseIR1   ; Stuck at GND due to stuck port data_in      ;
 ; ISDU:state_controller|State.S_00       ; Lost fanout                                 ;
-; Total Number of Removed Registers = 73 ;                                             ;
+; Total Number of Removed Registers = 57 ;                                             ;
 +----------------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                        ;
-+--------------------------------------+--------------------------------+----------------------------------------------------------------------------+
-; Register name                        ; Reason for Removal             ; Registers Removed due to This Register                                     ;
-+--------------------------------------+--------------------------------+----------------------------------------------------------------------------+
-; Mem2IO:memory_subsystem|hex_data[11] ; Stuck at GND                   ; datapath:d0|register:mdr|data[11], tristate:tr0|b[11],                     ;
-;                                      ; due to stuck port clock_enable ; ISDU:state_controller|State.PauseIR2, ISDU:state_controller|State.PauseIR1 ;
-; datapath:d0|register:cc|data[2]      ; Stuck at GND                   ; datapath:d0|ir:irunit|data[11], datapath:d0|ir:irunit|data[10],            ;
-;                                      ; due to stuck port clock_enable ; datapath:d0|ir:irunit|data[9]                                              ;
-; Mem2IO:memory_subsystem|hex_data[15] ; Stuck at GND                   ; datapath:d0|register:mdr|data[15], tristate:tr0|b[15]                      ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[14] ; Stuck at GND                   ; datapath:d0|register:mdr|data[14], tristate:tr0|b[14]                      ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[13] ; Stuck at GND                   ; datapath:d0|register:mdr|data[13], tristate:tr0|b[13]                      ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[12] ; Stuck at GND                   ; datapath:d0|register:mdr|data[12], tristate:tr0|b[12]                      ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[10] ; Stuck at GND                   ; datapath:d0|register:mdr|data[10], tristate:tr0|b[10]                      ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[9]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[9], tristate:tr0|b[9]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[8]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[8], tristate:tr0|b[8]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[7]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[7], tristate:tr0|b[7]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[6]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[6], tristate:tr0|b[6]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[5]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[5], tristate:tr0|b[5]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[4]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[4], tristate:tr0|b[4]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[3]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[3], tristate:tr0|b[3]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[2]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[2], tristate:tr0|b[2]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[1]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[1], tristate:tr0|b[1]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-; Mem2IO:memory_subsystem|hex_data[0]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[0], tristate:tr0|b[0]                        ;
-;                                      ; due to stuck port clock_enable ;                                                                            ;
-+--------------------------------------+--------------------------------+----------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                ;
++--------------------------------------+--------------------------------+--------------------------------------------------------------------+
+; Register name                        ; Reason for Removal             ; Registers Removed due to This Register                             ;
++--------------------------------------+--------------------------------+--------------------------------------------------------------------+
+; datapath:d0|register:cc|data[2]      ; Stuck at GND                   ; datapath:d0|ir:irunit|data[9], datapath:d0|ir:irunit|data[10],     ;
+;                                      ; due to stuck port clock_enable ; datapath:d0|ir:irunit|data[11]                                     ;
+; ISDU:state_controller|State.S_04     ; Stuck at GND                   ; ISDU:state_controller|State.S_21, ISDU:state_controller|State.S_20 ;
+;                                      ; due to stuck port data_in      ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[15] ; Stuck at GND                   ; datapath:d0|register:mdr|data[15]                                  ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[14] ; Stuck at GND                   ; datapath:d0|register:mdr|data[14]                                  ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[13] ; Stuck at GND                   ; datapath:d0|register:mdr|data[13]                                  ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[12] ; Stuck at GND                   ; datapath:d0|register:mdr|data[12]                                  ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[11] ; Stuck at GND                   ; datapath:d0|register:mdr|data[11]                                  ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[10] ; Stuck at GND                   ; datapath:d0|register:mdr|data[10]                                  ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[9]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[9]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[8]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[8]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[7]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[7]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[6]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[6]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[5]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[5]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[4]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[4]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[3]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[3]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[2]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[2]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[1]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[1]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
+; Mem2IO:memory_subsystem|hex_data[0]  ; Stuck at GND                   ; datapath:d0|register:mdr|data[0]                                   ;
+;                                      ; due to stuck port clock_enable ;                                                                    ;
++--------------------------------------+--------------------------------+--------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -406,7 +405,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 59    ;
+; Total registers                              ; 75    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 6     ;
@@ -414,6 +413,15 @@ Encoding Type:  One-Hot
 ; Number of registers using Clock Enable       ; 37    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |slc3|mux4:muxforCPU_bus|Mux15 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -612,7 +620,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port       ; Type   ; Severity ; Details                                                                             ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; ContinueIR ; Input  ; Info     ; Stuck at GND                                                                        ;
-; jsr_sel    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; LD_BEN     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; GatePC     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; GateMDR    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -620,9 +627,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; GateMARMUX ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; SR1MUX     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; SR2MUX     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ADDR1MUX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; offset_sel ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ADDR2MUX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -721,19 +725,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:d0"                                                                                                                                        ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; aluop[3..2] ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
-; IR[11..6]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; IR[4..0]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; ledVect12   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; jsr_sel     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; ADDR2MUX    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; ADDR1MUX    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:d0"                                                                                 ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; alumux_sel[1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; aluop[3..2]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; IR[11..6]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; IR[4..0]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ledVect12     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -741,7 +743,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -751,9 +753,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Thu Oct  1 22:00:26 2015
+    Info: Processing started: Sat Oct  3 13:20:49 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off slc3 -c slc3
-Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
     Info (12023): Found entity 1: tristate
 Info (12021): Found 2 design units, including 1 entities, in source file test_memory.sv
@@ -816,10 +818,9 @@ Info (12128): Elaborating entity "comparator" for hierarchy "datapath:d0|compara
 Info (12128): Elaborating entity "tristate" for hierarchy "tristate:tr0"
 Info (12128): Elaborating entity "Mem2IO" for hierarchy "Mem2IO:memory_subsystem"
 Info (12128): Elaborating entity "ISDU" for hierarchy "ISDU:state_controller"
-Warning (10030): Net "jsr_sel" at ISDU.sv(45) has no driver or initial value, using a default initial value '0'
-Warning (10034): Output port "alumux_sel" at ISDU.sv(47) has no driver
-Warning (10034): Output port "offset_sel" at ISDU.sv(44) has no driver
-Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "datapath:d0|regfile:regfileunit|data" is uninferred due to inappropriate RAM size
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13008): TRI or OPNDRN buffers permanently disabled
     Warning (13010): Node "tristate:tr0|Data[0]~synth"
     Warning (13010): Node "tristate:tr0|Data[1]~synth"
@@ -887,7 +888,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADDR[18]" is stuck at GND
     Warning (13410): Pin "ADDR[19]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 51 registers lost all their fanouts during netlist optimizations.
+Info (17049): 33 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 17 input pin(s) that do not drive logic
@@ -908,15 +909,15 @@ Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "S[14]"
     Warning (15610): No output dependent on input pin "S[15]"
     Warning (15610): No output dependent on input pin "Continue"
-Info (21057): Implemented 162 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 183 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 65 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 61 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 91 warnings
-    Info: Peak virtual memory: 449 megabytes
-    Info: Processing ended: Thu Oct  1 22:00:32 2015
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info (21061): Implemented 82 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 88 warnings
+    Info: Peak virtual memory: 414 megabytes
+    Info: Processing ended: Sat Oct  3 13:20:53 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

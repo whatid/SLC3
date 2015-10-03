@@ -22,7 +22,7 @@ module ISDU ( 	input	Clk,
 									
 				input [3:0]  Opcode, 
 				input        IR_5,
-				  input logic branch_enable, 
+				  input logic branch_enable, jsr_sel,  
 				output logic 	LD_MAR,
 								LD_MDR,
 								LD_IR,
@@ -41,11 +41,9 @@ module ISDU ( 	input	Clk,
 									SR1MUX, busMux, 
 				output logic 		SR2MUX,
 									ADDR1MUX,
-									offset_sel, 
-									jsr_sel, 
 
-				output logic [1:0] 	ADDR2MUX, alumux_sel, 
-				output logic 		MARMUX, 
+				output logic [1:0] 	ADDR2MUX,
+				output logic 		MARMUX, alumux_sel, 
 				  
 				output logic [1:0] 	ALUK,
 
@@ -154,8 +152,8 @@ module ISDU ( 	input	Clk,
 	    GateMDR = 1'b0;
 	    GateALU = 1'b0;
 	    GateMARMUX = 1'b0;
-		 
-		ALUK = 2'b00;
+		 alumux_sel = 1'b0; 
+		 ALUK = 2'b00;
 		 
 	    PCMUX = 2'b00;
 	    DRMUX = 2'b00;
@@ -171,8 +169,9 @@ module ISDU ( 	input	Clk,
 	    case (State)
 			Halted: ;
 			S_18 : 
-				begin 
-					GatePC = 1'b1;
+				begin
+					busMux = 2'b00; 
+					//GatePC = 1'b1;
 					LD_MAR = 1'b1;
 					PCMUX = 2'b00;
 					LD_PC = 1'b1;
@@ -185,8 +184,9 @@ module ISDU ( 	input	Clk,
 					LD_MDR = 1'b1;
                 end
             S_35 : 
-                begin 
-					GateMDR = 1'b1;
+                begin
+					busMux = 2'b01;  
+					//GateMDR = 1'b1;
 					LD_IR = 1'b1;
                 end
             PauseIR1: ;
@@ -196,21 +196,24 @@ module ISDU ( 	input	Clk,
             S_01 : 
                 begin 
 					ALUK = 2'b00;
-					GateALU = 1'b1;
+					busMux = 2'b10; 
+					//GateALU = 1'b1;
 					LD_REG = 1'b1;
 					LD_CC = 1'b1; 
                 end
 			S_05 : 
 				begin
 					ALUK = 2'b01; 
-					GateALU = 1'b1; 
+					//GateALU = 1'b1; 
+					busMux = 2'b10; 
 					LD_REG = 1'b1; 
 					LD_CC = 1'b1; 
 				end
 			S_09 : 
 				begin
 					ALUK = 2'b10; 
-					GateALU = 1'b1; 
+					//GateALU = 1'b1; 
+					busMux = 2'b10; 
 					LD_REG = 1'b1;
 					LD_CC = 1'b1;  
 				end
@@ -220,14 +223,16 @@ module ISDU ( 	input	Clk,
 					ADDR1MUX = 1'b0; 
 					ADDR2MUX = 2'b01; 
 					LD_PC = 1'b1; 
-					GatePC = 1'b1; 
+					busMux = 2'b00; 
+					//GatePC = 1'b1; 
 				end
 			S_12 : 
 				begin
 					PCMUX = 2'b01; 
 					LD_PC = 1'b1; 
 					ALUK = 2'b11; 
-					GateALU = 1'b1; 
+					busMux = 2'b10; 
+					//GateALU = 1'b1; 
 				end 
 			S_04 :;  
 	
