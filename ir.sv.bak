@@ -11,8 +11,7 @@ module ir
 	output logic [11:0] ledVect12, 
 	output logic [4:0] imm5,
 	output logic imm5_sel, 
-	output logic jsr_sel, 
-	output logic [15:0] ir_out
+	output logic jsr_sel
 
 );
 
@@ -28,7 +27,6 @@ end
 
 always_comb
 begin
-   ir_out = data; 
     opcode = data[15:12];
 
     dest = data[11:9];

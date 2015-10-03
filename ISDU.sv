@@ -54,7 +54,7 @@ module ISDU ( 	input	Clk,
 									Mem_WE
 				);
 
-    enum logic [4:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01 ,S_05, S_09, S_00, S_12, S_04, S_21, S_20, S_22}   State, Next_state;   // Internal state logic
+    enum logic [4:0] {Halted, Pause, S_18, S_33_1, S_33_2, S_35, S_32, S_01 ,S_05, S_09, S_00, S_12, S_04, S_21, S_20, S_22}   State, Next_state;   // Internal state logic
 	    
     always_ff @ (posedge Clk or posedge Reset )
     begin : Assign_Next_State
@@ -79,17 +79,12 @@ module ISDU ( 	input	Clk,
             S_33_2 : 
                 Next_state <= S_35;
             S_35 : 
-                Next_state <= S_32;
-            PauseIR1 : 
-                if (~ContinueIR) 
-                    Next_state <= PauseIR1;
-                else 
-                    Next_state <= PauseIR2;
-            PauseIR2 : 
-                if (ContinueIR) 
-                    Next_state <= PauseIR2;
-                else 
-                    Next_state <= S_18;
+                Next_state <= Pause;
+            Pause : 
+					if (~Continue)
+						Next_state <= S_32; 
+					else 
+						Next_state <= Pause; 
             S_32 : 
 				case (Opcode)
 					4'b0001 : 
@@ -189,8 +184,7 @@ module ISDU ( 	input	Clk,
 					//GateMDR = 1'b1;
 					LD_IR = 1'b1;
                 end
-            PauseIR1: ;
-            PauseIR2: ;
+            Pause: ; 
             S_32 : 
                 LD_BEN = 1'b1;
             S_01 : 

@@ -1,5 +1,5 @@
 Flow report for slc3
-Sat Oct  3 13:20:53 2015
+Sat Oct  3 13:58:11 2015
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Oct  3 13:20:53 2015       ;
+; Flow Status                        ; Successful - Sat Oct  3 13:58:10 2015       ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; slc3                                        ;
 ; Top-level Entity Name              ; slc3                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 77                                          ;
-;     Total combinational functions  ; 52                                          ;
-;     Dedicated logic registers      ; 75                                          ;
-; Total registers                    ; 75                                          ;
+; Total logic elements               ; 527                                         ;
+;     Total combinational functions  ; 363                                         ;
+;     Dedicated logic registers      ; 227                                         ;
+; Total registers                    ; 227                                         ;
 ; Total pins                         ; 101                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/03/2015 13:20:50 ;
+; Start date & time ; 10/03/2015 13:58:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; slc3                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 141568277330609.144389645023538 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 233845176318065.144389868515236 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
@@ -93,18 +93,18 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 410 MB              ; 00:00:02                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 449 MB              ; 00:00:04                           ;
+; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                       ;
-+----------------------+-------------------------------+------------------+------------+----------------+
-; Module Name          ; Machine Hostname              ; OS Name          ; OS Version ; Processor type ;
-+----------------------+-------------------------------+------------------+------------+----------------+
-; Analysis & Synthesis ; gelib-057-29.ews.illinois.edu ; Scientific Linux ; 6          ; x86_64         ;
-+----------------------+-------------------------------+------------------+------------+----------------+
++---------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                   ;
++----------------------+---------------------------+------------------+------------+----------------+
+; Module Name          ; Machine Hostname          ; OS Name          ; OS Version ; Processor type ;
++----------------------+---------------------------+------------------+------------+----------------+
+; Analysis & Synthesis ; linux-a3.ews.illinois.edu ; Scientific Linux ; 6          ; x86_64         ;
++----------------------+---------------------------+------------------+------------+----------------+
 
 
 ------------

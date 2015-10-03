@@ -31,13 +31,38 @@ logic Reset_ah, Continue_ah, Run_ah;
 assign Reset_ah = ~Reset;
 assign Continue_ah = ~Continue;
 assign Run_ah = ~Run;
+assign LED = ledVect12; 
 
 // An array of 4-bit wires to connect the hex_drivers efficiently to wherever we want
 // For Lab 1, they will direclty be connected to the IR register through an always_comb circuit
 // For Lab 2, they will be patched into the MEM2IO module so that Memory-mapped IO can take place
 logic [3:0] hex_4[3:0]; 
-HexDriver hex_drivers[3:0] (hex_4, {HEX3, HEX2, HEX1, HEX0});
+//HexDriver hex_drivers[3:0] (hex_4, {HEX3, HEX2, HEX1, HEX0});
 // This works thanks to http://stackoverflow.com/questions/1378159/verilog-can-we-have-an-array-of-custom-modules
+
+HexDriver reg_to_hex0
+(
+	.in(IR[3:0]),
+	.out(HEX0)
+);
+
+HexDriver reg_to_hex1
+(
+	.in(IR[7:4]),
+	.out(HEX1)
+);
+
+HexDriver reg_to_hex2
+(
+	.in(IR[11:8]),
+	.out(HEX2)
+);
+
+HexDriver reg_to_hex3
+(
+	.in(IR[15:12]),
+	.out(HEX3)
+);
 
 // Internal connections
 logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED;

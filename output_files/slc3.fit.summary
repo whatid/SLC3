@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sat Oct  3 13:08:22 2015
+Fitter Status : Successful - Sat Oct  3 13:33:22 2015
 Quartus II 32-bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
 Revision Name : slc3
 Top-level Entity Name : slc3
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 60 / 114,480 ( < 1 % )
-    Total combinational functions : 36 / 114,480 ( < 1 % )
-    Dedicated logic registers : 59 / 114,480 ( < 1 % )
-Total registers : 59
+Total logic elements : 77 / 114,480 ( < 1 % )
+    Total combinational functions : 52 / 114,480 ( < 1 % )
+    Dedicated logic registers : 75 / 114,480 ( < 1 % )
+Total registers : 75
 Total pins : 101 / 529 ( 19 % )
 Total virtual pins : 0
 Total memory bits : 0 / 3,981,312 ( 0 % )

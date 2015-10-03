@@ -136,7 +136,8 @@ ir irunit
     .imm5(imm5),
     .imm5_sel(imm5_sel), 
     .offset11(offset11),
-    .jsr_sel(jsr_sel)
+    .jsr_sel(jsr_sel), 
+	 .ir_out(IR)
 );
 
 sext imm5_sext
