@@ -1,7 +1,7 @@
 module datapath
 (
 	input clk, 
-	input LD_PC, LD_MAR, LD_MDR, LD_IR, load_regfile, load_cc,  
+	input LD_PC, LD_MAR, LD_MDR, LD_IR, load_regfile, load_cc, imm5_ok,  
 	input [1:0] PCMUX, ADDR2MUX, 
 	input [15:0] cpu_bus, MDR, 
 	input r7_sel, DRMUX, 
@@ -148,7 +148,7 @@ sext imm5_sext
 
 mux2 sr2mux
 (
-    .sel(imm5_sel), 
+    .sel(imm5_ok), 
     .a(sr2_out), 
     .b(imm5_op),
     .f(sr2mux_out)

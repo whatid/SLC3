@@ -6,9 +6,11 @@ add wave -noupdate /testbench/processor/fuck/muxforCPU_bus/f
 add wave -noupdate /testbench/processor/fuck/d0/irunit/in
 add wave -noupdate /testbench/processor/fuck/d0/mdr/out
 add wave -noupdate /testbench/processor/fuck/d0/mar/out
-add wave -noupdate /testbench/processor/fuck/tr0/Data
+add wave -noupdate /testbench/processor/fuck/d0/regfileunit/load
+add wave -noupdate /testbench/processor/fuck/d0/regfileunit/in
+add wave -noupdate /testbench/processor/fuck/d0/regfileunit/dest
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {750628 ps} 0}
+WaveRestoreCursors {{Cursor 1} {184465 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 357
 configure wave -valuecolwidth 224
@@ -24,4 +26,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {657696 ps} {1018016 ps}
+WaveRestoreZoom {143981 ps} {324141 ps}

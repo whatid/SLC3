@@ -55,6 +55,7 @@ logic [15:0] MAR, MDR, IR, PC, ALU, MARMUX_OUT, MDR_OUT;
 logic [15:0] Data_Mem_In, Data_Mem_Out; 
 logic [1:0] busMux; 
 logic [11:0] ledVect12; 
+logic imm5_ok; 
 // CPU BUS 
 logic [15:0] cpu_bus; 
 
@@ -119,7 +120,8 @@ datapath d0
 	.ADDR1MUX, 
 	.ADDR2MUX, 
 	.r7_sel, 
-	.MDR_OUT
+	.MDR_OUT, 
+	.imm5_ok
 
 );
 
@@ -143,7 +145,7 @@ ISDU state_controller(
 	.*, .Reset(Reset_ah), .Run(Run_ah), .Continue(Continue_ah), .ContinueIR(1'b0), 
 	.Opcode(IR[15:12]), .IR_5(IR[5]), //.IR_11(IR[11]),
 	.Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE), .busMux(busMux), 
-	.alumux_sel, .branch_enable, .jsr_sel, .r7_sel
+	.alumux_sel, .branch_enable, .jsr_sel, .r7_sel, .imm5_ok
 );
 
 endmodule

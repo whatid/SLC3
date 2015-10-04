@@ -9,6 +9,7 @@ entity datapath is
         LD_IR           : in     vl_logic;
         load_regfile    : in     vl_logic;
         load_cc         : in     vl_logic;
+        imm5_ok         : in     vl_logic;
         PCMUX           : in     vl_logic_vector(1 downto 0);
         ADDR2MUX        : in     vl_logic_vector(1 downto 0);
         cpu_bus         : in     vl_logic_vector(15 downto 0);

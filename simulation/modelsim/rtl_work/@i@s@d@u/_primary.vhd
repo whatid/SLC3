@@ -12,6 +12,7 @@ entity ISDU is
         branch_enable   : in     vl_logic;
         jsr_sel         : in     vl_logic;
         r7_sel          : out    vl_logic;
+        imm5_ok         : out    vl_logic;
         LD_MAR          : out    vl_logic;
         LD_MDR          : out    vl_logic;
         LD_IR           : out    vl_logic;

@@ -23,7 +23,7 @@ module ISDU ( 	input	Clk,
 				input [3:0]  Opcode, 
 				input        IR_5,
 				  input logic branch_enable, jsr_sel,  
-				  output logic r7_sel, 
+				  output logic r7_sel, imm5_ok, 
 				output logic 	LD_MAR,
 								LD_MDR,
 								LD_IR,
@@ -177,6 +177,7 @@ module ISDU ( 	input	Clk,
 	    DRMUX = 1'b0;
 	    SR1MUX = 2'b00;
 	    SR2MUX = 1'b0;
+		 imm5_ok = 1'b0; 
 	    ADDR1MUX = 1'b0;
 	    ADDR2MUX = 2'b00;
 	    MARMUX = 1'b0;
@@ -222,6 +223,9 @@ module ISDU ( 	input	Clk,
 					//GateALU = 1'b1;
 					LD_REG = 1'b1;
 					LD_CC = 1'b1; 
+					
+					if (IR_5)
+						imm5_ok = 1'b1; 
                 end
 			S_05 : 
 				begin
@@ -230,6 +234,9 @@ module ISDU ( 	input	Clk,
 					busMux = 2'b10; 
 					LD_REG = 1'b1; 
 					LD_CC = 1'b1; 
+					
+					if (IR_5)
+						imm5_ok = 1'b1; 
 				end
 			S_09 : 
 				begin
@@ -245,7 +252,7 @@ module ISDU ( 	input	Clk,
 					ADDR1MUX = 1'b0; 
 					ADDR2MUX = 2'b01; 
 					LD_PC = 1'b1; 
-					busMux = 2'b00; 
+					busMux = 2'b11; 
 					//GatePC = 1'b1; 
 				end
 			S_12 : 
@@ -273,7 +280,7 @@ module ISDU ( 	input	Clk,
 				LD_PC = 1'b1; 
 				ADDR1MUX = 1'b0; 
 				ADDR2MUX = 2'b00; 
-				busMux = 2'b00; 
+				busMux = 2'b11; 
 				end
 			S_06: 
 				begin
