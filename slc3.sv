@@ -22,6 +22,7 @@ module slc3(
 	output logic [6:0] HEX0, HEX1, HEX2, HEX3,
 	output logic CE, UB, LB, OE, WE,
 	output logic [19:0] ADDR,
+	input logic [15:0] mdata, 
 	inout wire [15:0] Data //tristate buffers need to be of type wire
 );
 
@@ -39,6 +40,25 @@ assign Run_ah = ~Run;
 logic [3:0] hex_4[3:0]; 
 //HexDriver hex_drivers[3:0] (hex_4, {HEX3, HEX2, HEX1, HEX0});
 // This works thanks to http://stackoverflow.com/questions/1378159/verilog-can-we-have-an-array-of-custom-modules
+
+// Internal connections
+logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED;
+logic load_regfile, load_cc; 
+logic branch_enable, jsr_sel; 
+logic alumux_sel; 
+logic GatePC, GateMDR, GateALU, GateMARMUX;
+logic SR2MUX, ADDR1MUX, MARMUX, MIO_EN;
+logic BEN, offset_sel, r7_sel, DRMUX; 
+logic [1:0] PCMUX, SR1MUX, ADDR2MUX, ALUK;
+logic [15:0] MDR_In;
+logic [15:0] MAR, MDR, IR, PC, ALU, MARMUX_OUT, MDR_OUT;
+logic [15:0] Data_Mem_In, Data_Mem_Out; 
+logic [1:0] busMux; 
+logic [11:0] ledVect12; 
+// CPU BUS 
+logic [15:0] cpu_bus; 
+
+assign LED = ledVect12; 
 
 HexDriver reg_to_hex0
 (
@@ -64,30 +84,11 @@ HexDriver reg_to_hex3
 	.out(HEX3)
 );
 
-// Internal connections
-logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED;
-logic load_regfile, load_cc; 
-logic branch_enable, jsr_sel; 
-logic alumux_sel; 
-logic GatePC, GateMDR, GateALU, GateMARMUX;
-logic SR2MUX, ADDR1MUX, MARMUX, MIO_EN;
-logic BEN, offset_sel; 
-logic [1:0] PCMUX, DRMUX, SR1MUX, ADDR2MUX, ALUK;
-logic [15:0] MDR_In;
-logic [15:0] MAR, MDR, IR, PC, ALU, MARMUX_OUT;
-logic [15:0] Data_Mem_In, Data_Mem_Out; 
-logic [1:0] busMux; 
-logic [11:0] ledVect12; 
-// CPU BUS 
-logic [15:0] cpu_bus; 
-
-assign LED = ledVect12; 
-
 mux4 muxforCPU_bus
 (
 	.sel(busMux),
 	.a(PC), // 2'b00
-	.b(Data_Mem_In), // 2'b01
+	.b(MDR_OUT), // 2'b01
 	.c(ALU), // 2'b10
 	.d(MARMUX_OUT), // 2'b11
 	.f(cpu_bus)
@@ -107,8 +108,7 @@ datapath d0
 	.PCMUX, .DRMUX, .alumux_sel(alumux_sel), 
 	.MARMUX, 
 	.aluop(ALUK), 
-	.MDR_In, 
-	.IR, .MAR, .MDR, 
+	.IR, .MAR, .MDR(mdata), 
 	.ledVect12, 
 	.branch_enable, 
 	.cpu_bus(cpu_bus), 
@@ -117,14 +117,18 @@ datapath d0
 	.jsr_sel, 
 	.alu_out(ALU), 
 	.ADDR1MUX, 
-	.ADDR2MUX
+	.ADDR2MUX, 
+	.r7_sel, 
+	.MDR_OUT
 
 );
 
 // Break the tri-state bus to the ram into input/outputs 
+/*
 tristate #(.N(16)) tr0(
 	.Clk(Clk), .OE(~WE), .In(cpu_bus), .Out(Data_Mem_In), .Data(Data)
 );
+
 
 // Our SRAM and I/O controller (note, this plugs into MDR/MAR
 Mem2IO memory_subsystem(
@@ -132,13 +136,14 @@ Mem2IO memory_subsystem(
 	.HEX0(hex_4[0]), .HEX1(hex_4[1]), .HEX2(hex_4[2]), .HEX3(hex_4[3]),
 	.Data_CPU_In(MDR), .Data_CPU_Out(MDR_In)
 );
+*/
 
 // State machine, you need to fill in the code here as well
 ISDU state_controller(
 	.*, .Reset(Reset_ah), .Run(Run_ah), .Continue(Continue_ah), .ContinueIR(1'b0), 
 	.Opcode(IR[15:12]), .IR_5(IR[5]), //.IR_11(IR[11]),
 	.Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE), .busMux(busMux), 
-	.alumux_sel, .branch_enable, .jsr_sel
+	.alumux_sel, .branch_enable, .jsr_sel, .r7_sel
 );
 
 endmodule

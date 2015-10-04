@@ -2,12 +2,12 @@ module datapath
 (
 	input clk, 
 	input LD_PC, LD_MAR, LD_MDR, LD_IR, load_regfile, load_cc,  
-	input [1:0] PCMUX, DRMUX, alumux_sel, ADDR2MUX, 
-	input [15:0] cpu_bus, 
-	input MARMUX, ADDR1MUX, 
-	input [3:0] aluop, 
-	input [15:0] MDR_In, 
-	output [15:0] IR, MAR, MDR, pc_out, marmux_out, alu_out, 
+	input [1:0] PCMUX, ADDR2MUX, 
+	input [15:0] cpu_bus, MDR, 
+	input r7_sel, DRMUX, 
+	input MARMUX, ADDR1MUX, alumux_sel, 
+	input [1:0] aluop, 
+	output [15:0] IR, MAR, pc_out, marmux_out, alu_out, MDR_OUT,  
 	output [11:0] ledVect12, 
 	output logic branch_enable, jsr_sel
 
@@ -50,19 +50,19 @@ mux2 adder1mux
     .f(adder1mux_out)
 );
 
-sext offset6_sext
+sext #(.width(6)) offset6_sext
 (
     .in(offset6), 
     .out(offset6_out)
 );
 
-sext pc_offset11
+sext #(.width(11)) pc_offset11
 (
     .in(offset11), 
     .out(offset11_out)
 );
 
-sext pc_offset9
+sext #(.width(9)) pc_offset9
 (
     .in(offset9),
     .out(offset9_out)
@@ -101,16 +101,15 @@ register mar
 (
     .clk(clk),
     .load(LD_MAR),
-    .in(marmux_out),
+    .in(cpu_bus),
     .out(MAR)
 );
 
-mux3 mdrmux 
+mux2 mdrmux 
 (
     .sel(DRMUX),
-    .a(MDR_In),
-    .b(16'b0),
-	 .c(16'b0),
+    .a(MDR),
+    .b(cpu_bus),
     .f(mdrmux_out)
 );
 
@@ -119,7 +118,7 @@ register mdr
     .clk(clk),
     .load(LD_MDR),
     .in(mdrmux_out),
-    .out(MDR)
+    .out(MDR_OUT)
 );
 
 ir irunit
@@ -172,9 +171,9 @@ alu ArithmeticLogicUnit
 
 );
 
-mux2 storemux
+mux2 #(.width(3)) storemux
 (
-    .sel(jsr_sel),
+    .sel(r7_sel),
     .a(sr1),
     .b(3'b111),
     .f(storemux_out)

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for slc3
-Sat Oct  3 14:36:12 2015
+Sun Oct  4 13:20:59 2015
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Oct  3 14:36:12 2015 ;
+; EDA Netlist Writer Status ; Successful - Sun Oct  4 13:20:59 2015 ;
 ; Revision Name             ; slc3                                  ;
 ; Top-level Entity Name     ; slc3                                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Sat Oct  3 14:36:06 2015
+    Info: Processing started: Sun Oct  4 13:20:54 2015
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off slc3 -c slc3
 Info (204019): Generated file slc3_7_1200mv_85c_slow.svo in folder "/home/wirjo2/slc3/SLC3/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file slc3_7_1200mv_0c_slow.svo in folder "/home/wirjo2/slc3/SLC3/simulation/modelsim/" for EDA simulation tool
@@ -100,8 +100,8 @@ Info (204019): Generated file slc3_min_1200mv_0c_v_fast.sdo in folder "/home/wir
 Info (204019): Generated file slc3_v.sdo in folder "/home/wirjo2/slc3/SLC3/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 357 megabytes
-    Info: Processing ended: Sat Oct  3 14:36:12 2015
+    Info: Processing ended: Sun Oct  4 13:21:00 2015
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

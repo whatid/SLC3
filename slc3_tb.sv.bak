@@ -1,0 +1,53 @@
+
+module slc3_tb; 
+
+timeunit 10ns; 
+timeprecision 1ns; 
+
+logic [15:0] S;
+logic Clk, Reset, Run, Continue;
+logic [11:0] LED;
+logic [6:0] HEX0, HEX1, HEX2, HEX3;
+logic CE, UB, LB, OE, WE;
+logic [19:0] mem_address;
+wire [15:0] mem_data; //tristate buffers need to be of type wire
+
+initial clk = 0; 
+always #5 clk = ~clk; 
+
+slc3 fuck
+(
+
+	.S,
+	.Clk, 
+	.Reset, 
+	.Run, 
+	.Continue,
+	.LED, // 12 bits
+	.HEX0, 
+	.HEX1, 
+	.HEX2, 
+	.HEX3, // 7 bits
+	.CE, 
+	.UB,
+	.LB, 
+	.OE, 
+	.WE,
+	.ADDR(mem_address), // 20 bits
+	.Data(mem_data)  // 16 bits
+
+);
+
+memory fuckthis
+(
+	.Clk,
+	.Reset, 
+    .I_O (mem_data), // 16 bits
+    .A(mem_address), // 20 bits
+    .CE,
+    .UB,
+    .LB,
+    .OE,
+    .WE 
+
+);

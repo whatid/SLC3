@@ -23,6 +23,7 @@ module ISDU ( 	input	Clk,
 				input [3:0]  Opcode, 
 				input        IR_5,
 				  input logic branch_enable, jsr_sel,  
+				  output logic r7_sel, 
 				output logic 	LD_MAR,
 								LD_MDR,
 								LD_IR,
@@ -37,10 +38,10 @@ module ISDU ( 	input	Clk,
 								GateMARMUX,
 									
 				output logic [1:0] 	PCMUX,
-				                    DRMUX,
+				                   
 									SR1MUX, busMux, 
 				output logic 		SR2MUX,
-									ADDR1MUX,
+									ADDR1MUX, DRMUX,
 
 				output logic [1:0] 	ADDR2MUX,
 				output logic 		MARMUX, alumux_sel, 
@@ -80,7 +81,7 @@ module ISDU ( 	input	Clk,
                 Next_state <= S_35;
             S_35 : 
                 Next_state <= Pause;
-            Pause : 
+            Pause :
 					if (Continue)
 						Next_state <= S_32; 
 					else 
@@ -96,9 +97,15 @@ module ISDU ( 	input	Clk,
 					4'b0000 : 
 						Next_state <= S_00;
 					4'b1100 : 
-						Next_state = S_12; 
+						Next_state <= S_12; 
 					4'b0100 : 
-						Next_state = S_04;   
+						Next_state <= S_04;   
+					4'b0110 : 
+						Next_state <= S_06; 
+					4'b0111 : 
+						Next_state <= S_07; 
+					4'b1101 : 
+						Next_state <= Pause; 
 					default : 
 					    Next_state <= S_18;
 				endcase
@@ -165,9 +172,9 @@ module ISDU ( 	input	Clk,
 	    GateMARMUX = 1'b0;
 		 alumux_sel = 1'b0; 
 		 ALUK = 2'b00;
-		 
+		 r7_sel = 1'b0; 
 	    PCMUX = 2'b00;
-	    DRMUX = 2'b00;
+	    DRMUX = 1'b0;
 	    SR1MUX = 2'b00;
 	    SR2MUX = 1'b0;
 	    ADDR1MUX = 1'b0;
@@ -253,6 +260,7 @@ module ISDU ( 	input	Clk,
 				begin
 					busMux = 2'b00; 
 					LD_REG = 1'b1; 
+					r7_sel = 1'b1; 
 				end
 			S_20: 
 				begin
