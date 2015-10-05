@@ -63,7 +63,7 @@ module test_memory ( input 			Clk,
 		if(Reset)   // Insert initial memory contents here
 		begin
 mem_array[   0 ] <=    opCLR(R0)                ;       // Clear the register so it can be used as a base
-mem_array[   1 ] <=    opLDR(R1, R0, 16'd58)      ;       // Load switches
+mem_array[   1 ] <=    opLDR(R1, R0, inSW)      ;       // Load switches
 mem_array[   2 ] <=    opJMP(R1)                ;       // Jump to the start of a program
 
                                                         // Basic I/O test 1
@@ -129,7 +129,7 @@ mem_array[  54 ] <=    opPSE(12'h801)           ;       // Checkpoint 1 - prepar
 mem_array[  55 ] <=    opLDR(R1, R0, inSW)      ;       // Input operand 1
 mem_array[  56 ] <=    opPSE(12'h802)           ;       // Checkpoint 2 - prepare to input
 mem_array[  57 ] <=    opLDR(R2, R0, inSW)      ;       // Input operand 2
-mem_array[  58 ] <=    opADD(R5, R5, 6)        ;       // shift running total; LOOP DEST
+mem_array[  58 ] <=    opADD(R5, R5, R5)        ;       // shift running total; LOOP DEST
 mem_array[  59 ] <=    opAND(R7, R3, R1)        ;       // apply mask
 mem_array[  60 ] <=    opBR(z, 1)               ;       // test bit and jump over...
 mem_array[  61 ] <=    opADD(R5, R5, R2)        ;       // ... the addition

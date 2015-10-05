@@ -22,7 +22,6 @@ module slc3(
 	output logic [6:0] HEX0, HEX1, HEX2, HEX3,
 	output logic CE, UB, LB, OE, WE,
 	output logic [19:0] ADDR,
-	input logic [15:0] mdata, 
 	inout wire [15:0] Data //tristate buffers need to be of type wire
 );
 
@@ -109,7 +108,7 @@ datapath d0
 	.PCMUX, .DRMUX, .alumux_sel(alumux_sel), 
 	.MARMUX, 
 	.aluop(ALUK), 
-	.IR, .MAR, .MDR(mdata), 
+	.IR, .MAR, .MDR_In(MDR_In), 
 	.ledVect12, 
 	.branch_enable, 
 	.cpu_bus(cpu_bus), 
@@ -120,15 +119,15 @@ datapath d0
 	.ADDR1MUX, 
 	.ADDR2MUX, 
 	.r7_sel, 
-	.MDR_OUT, 
+	.MDR_OUT(MDR_OUT), 
 	.imm5_ok
 
 );
 
 // Break the tri-state bus to the ram into input/outputs 
-/*
+
 tristate #(.N(16)) tr0(
-	.Clk(Clk), .OE(~WE), .In(cpu_bus), .Out(Data_Mem_In), .Data(Data)
+	.Clk(Clk), .OE(~WE), .In(Data_Mem_Out), .Out(Data_Mem_In), .Data(Data)
 );
 
 
@@ -136,9 +135,9 @@ tristate #(.N(16)) tr0(
 Mem2IO memory_subsystem(
 	.*, .Reset(Reset_ah), .A(ADDR), .Switches(S), 
 	.HEX0(hex_4[0]), .HEX1(hex_4[1]), .HEX2(hex_4[2]), .HEX3(hex_4[3]),
-	.Data_CPU_In(MDR), .Data_CPU_Out(MDR_In)
+	.Data_CPU_In(MDR_OUT), .Data_CPU_Out(MDR_In)
 );
-*/
+
 
 // State machine, you need to fill in the code here as well
 ISDU state_controller(

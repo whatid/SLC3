@@ -3,7 +3,7 @@ module datapath
 	input clk, 
 	input LD_PC, LD_MAR, LD_MDR, LD_IR, load_regfile, load_cc, imm5_ok,  
 	input [1:0] PCMUX, ADDR2MUX, 
-	input [15:0] cpu_bus, MDR, 
+	input [15:0] cpu_bus, MDR_In, 
 	input r7_sel, DRMUX, 
 	input MARMUX, ADDR1MUX, alumux_sel, 
 	input [1:0] aluop, 
@@ -108,7 +108,7 @@ register mar
 mux2 mdrmux 
 (
     .sel(DRMUX),
-    .a(MDR),
+    .a(MDR_In),
     .b(cpu_bus),
     .f(mdrmux_out)
 );
@@ -174,7 +174,7 @@ alu ArithmeticLogicUnit
 mux2 #(.width(3)) storemux
 (
     .sel(r7_sel),
-    .a(sr1),
+    .a(dest),
     .b(3'b111),
     .f(storemux_out)
 );
@@ -184,9 +184,9 @@ regfile regfileunit
     .clk(clk),
     .load(load_regfile),
     .in(cpu_bus),
-    .src_a(storemux_out), 
+    .src_a(sr1), 
     .src_b(sr2), 
-    .dest(dest),
+    .dest(storemux_out),
     .reg_a(sr1_out), 
     .reg_b(sr2_out)
 );

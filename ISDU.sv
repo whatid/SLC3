@@ -214,8 +214,8 @@ module ISDU ( 	input	Clk,
 					LD_IR = 1'b1;
                 end
             Pause: ; 
-            S_32 : 
-                LD_BEN = 1'b1;
+            S_32 : ; 
+               // LD_BEN = 1'b1;
             S_01 : 
                 begin 
 					ALUK = 2'b00;
@@ -315,6 +315,7 @@ module ISDU ( 	input	Clk,
 					ALUK = 2'b11; 
 					busMux = 2'b10; 
 					LD_MDR = 1'b1; 
+					DRMUX = 1'b1; 
 				end
 			S_16_1:
 				begin
