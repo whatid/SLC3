@@ -2,5 +2,4 @@ Warning (10268): Verilog HDL information at ISDU.sv(70): always construct contai
 Info (10281): Verilog HDL Declaration information at datapath.sv(5): object "PCMUX" differs only in case from object "pcmux" in the same scope
 Info (10281): Verilog HDL Declaration information at datapath.sv(8): object "MARMUX" differs only in case from object "marmux" in the same scope
 Info (10281): Verilog HDL Declaration information at datapath.sv(10): object "MAR" differs only in case from object "mar" in the same scope
-Info (10281): Verilog HDL Declaration information at datapath.sv(6): object "MDR" differs only in case from object "mdr" in the same scope
 Warning (10268): Verilog HDL information at memory.sv(36): always construct contains both blocking and non-blocking assignments

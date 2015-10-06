@@ -13,7 +13,7 @@ entity datapath is
         PCMUX           : in     vl_logic_vector(1 downto 0);
         ADDR2MUX        : in     vl_logic_vector(1 downto 0);
         cpu_bus         : in     vl_logic_vector(15 downto 0);
-        MDR             : in     vl_logic_vector(15 downto 0);
+        MDR_In          : in     vl_logic_vector(15 downto 0);
         r7_sel          : in     vl_logic;
         DRMUX           : in     vl_logic;
         MARMUX          : in     vl_logic;

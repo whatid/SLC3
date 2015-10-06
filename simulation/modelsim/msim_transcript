@@ -55,12 +55,149 @@
 # vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/ISDU.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ISDU
-# ** Error: /home/wirjo2/slc3/SLC3/ISDU.sv(219): 'S_01' already exists; must not be redefined as a named block
-# ** Error: /software/altera/13.1/modelsim_ase/linuxaloem/vlog failed.
-# Error in macro ./slc3_run_msim_rtl_verilog.do line 15
-# /software/altera/13.1/modelsim_ase/linuxaloem/vlog failed.
-#     while executing
-# "vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/ISDU.sv}"
+# 
+# Top level modules:
+# 	ISDU
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/ir.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ir
+# 
+# Top level modules:
+# 	ir
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/HexDriver.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/gencc.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module gencc
+# 
+# Top level modules:
+# 	gencc
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/comparator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module comparator
+# 
+# Top level modules:
+# 	comparator
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/alu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/test_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package SLC3_2
+# -- Compiling package test_memory_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/slc3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/slc3_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module slc3_tb
+# 
+# Top level modules:
+# 	slc3_tb
+# 
+# vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps testbench 
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.slc3_tb
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.mux4
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.mux2
+# Loading work.sext
+# Loading work.adder
+# Loading work.register
+# Loading work.plus1
+# Loading work.ir
+# Loading work.alu
+# Loading work.regfile
+# Loading work.gencc
+# Loading work.comparator
+# Loading work.ISDU
+# Loading work.SLC3_2
+# Loading work.test_memory_sv_unit
+# Loading work.test_memory
+# ** Warning: (vsim-3017) /home/wirjo2/slc3/SLC3/slc3_tb.sv(33): [TFMPC] - Too few port connections. Expected 18, found 17.
+#         Region: /testbench/processor/fuck
+# ** Warning: (vsim-3722) /home/wirjo2/slc3/SLC3/slc3_tb.sv(33): [TFMPC] - Missing connection for port 'Data'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+# Unknown aluop
+do wave.do
+restart -f; run 3000ns
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.slc3_tb
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.mux4
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.mux2
+# Loading work.sext
+# Loading work.adder
+# Loading work.register
+# Loading work.plus1
+# Loading work.ir
+# Loading work.alu
+# Loading work.regfile
+# Loading work.gencc
+# Loading work.comparator
+# Loading work.ISDU
+# Loading work.SLC3_2
+# Loading work.test_memory_sv_unit
+# Loading work.test_memory
+# ** Warning: (vsim-3017) /home/wirjo2/slc3/SLC3/slc3_tb.sv(33): [TFMPC] - Too few port connections. Expected 18, found 17.
+#         Region: /testbench/processor/fuck
+# ** Warning: (vsim-3722) /home/wirjo2/slc3/SLC3/slc3_tb.sv(33): [TFMPC] - Missing connection for port 'Data'.
+# Unknown aluop
 do slc3_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -221,6 +358,7 @@ do slc3_run_msim_rtl_verilog.do
 # ** Warning: (vsim-3017) /home/wirjo2/slc3/SLC3/slc3_tb.sv(33): [TFMPC] - Too few port connections. Expected 18, found 17.
 #         Region: /testbench/processor/fuck
 # ** Warning: (vsim-3722) /home/wirjo2/slc3/SLC3/slc3_tb.sv(33): [TFMPC] - Missing connection for port 'Data'.
+# WARNING: No extended dataflow license exists
 # 
 # add wave *
 # view structure
@@ -230,7 +368,7 @@ do slc3_run_msim_rtl_verilog.do
 # run 1000 ns
 # Unknown aluop
 do wave.do
-restart -f ;run 1000ns
+restart -f; run 34000ns
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.slc3_tb
@@ -257,3 +395,4 @@ restart -f ;run 1000ns
 #         Region: /testbench/processor/fuck
 # ** Warning: (vsim-3722) /home/wirjo2/slc3/SLC3/slc3_tb.sv(33): [TFMPC] - Missing connection for port 'Data'.
 # Unknown aluop
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.

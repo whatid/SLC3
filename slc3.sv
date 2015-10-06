@@ -62,25 +62,25 @@ assign LED = ledVect12;
 
 HexDriver reg_to_hex0
 (
-	.in(IR[3:0]),
+	.in(MDR_OUT[3:0]),
 	.out(HEX0)
 );
 
 HexDriver reg_to_hex1
 (
-	.in(IR[7:4]),
+	.in(MDR_OUT[7:4]),
 	.out(HEX1)
 );
 
 HexDriver reg_to_hex2
 (
-	.in(IR[11:8]),
+	.in(MDR_OUT[11:8]),
 	.out(HEX2)
 );
 
 HexDriver reg_to_hex3
 (
-	.in(IR[15:12]),
+	.in(MDR_OUT[15:12]),
 	.out(HEX3)
 );
 
