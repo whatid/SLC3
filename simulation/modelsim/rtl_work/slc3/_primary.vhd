@@ -18,7 +18,6 @@ entity slc3 is
         OE              : out    vl_logic;
         WE              : out    vl_logic;
         ADDR            : out    vl_logic_vector(19 downto 0);
-        mdata           : in     vl_logic_vector(15 downto 0);
         Data            : inout  vl_logic_vector(15 downto 0)
     );
 end slc3;

@@ -175,16 +175,6 @@
 # Loading work.test_memory
 # 
 # add wave *
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
-# ** Error: Cannot lock WLF file: "vsim.wlf"
-#           errno 11: Resource temporarily unavailable.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: wirjo2  Hostname: linux-a2.ews.illinois.edu  ProcessID: 6315
-#           Attempting to use alternate WLF file "./wlft18xIsS".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft18xIsS
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -219,7 +209,9 @@ restart -f; run 5000ns
 # Loading work.test_memory
 # Unknown aluop
 add wave -position insertpoint  \
-sim:/testbench/processor/fuck/memory_subsystem/hex_data
+sim:/testbench/processor/fuck/memory_subsystem/Data_CPU_In
+add wave -position insertpoint  \
+sim:/testbench/processor/fuck/memory_subsystem/Data_CPU_Out
 restart -f; run 5000ns
 # Loading sv_std.std
 # Loading work.testbench
@@ -247,13 +239,7 @@ restart -f; run 5000ns
 # Loading work.test_memory
 # Unknown aluop
 add wave -position insertpoint  \
-sim:/testbench/processor/HEX0
-add wave -position insertpoint  \
-sim:/testbench/processor/HEX1
-add wave -position insertpoint  \
-sim:/testbench/processor/HEX2
-add wave -position insertpoint  \
-sim:/testbench/processor/HEX3
+sim:/testbench/processor/mem_data
 restart -f; run 5000ns
 # Loading sv_std.std
 # Loading work.testbench
@@ -280,4 +266,3 @@ restart -f; run 5000ns
 # Loading work.test_memory_sv_unit
 # Loading work.test_memory
 # Unknown aluop
-# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.

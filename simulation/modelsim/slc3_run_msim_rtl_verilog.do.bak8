@@ -5,7 +5,6 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/tristate.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/SLC3_2.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/sext.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/register.sv}
@@ -13,7 +12,6 @@ vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/regfi
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/plus1.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/mux3.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/mux2.sv}
-vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/Mem2IO.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/ISDU.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/ir.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/HexDriver.sv}

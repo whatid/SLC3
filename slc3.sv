@@ -37,7 +37,7 @@ assign Run_ah = ~Run;
 // For Lab 1, they will direclty be connected to the IR register through an always_comb circuit
 // For Lab 2, they will be patched into the MEM2IO module so that Memory-mapped IO can take place
 logic [3:0] hex_4[3:0]; 
-//HexDriver hex_drivers[3:0] (hex_4, {HEX3, HEX2, HEX1, HEX0});
+HexDriver hex_drivers[3:0] (hex_4, {HEX3, HEX2, HEX1, HEX0});
 // This works thanks to http://stackoverflow.com/questions/1378159/verilog-can-we-have-an-array-of-custom-modules
 
 // Internal connections
@@ -59,30 +59,6 @@ logic imm5_ok;
 logic [15:0] cpu_bus; 
 
 assign LED = ledVect12; 
-
-HexDriver reg_to_hex0
-(
-	.in(MDR_OUT[3:0]),
-	.out(HEX0)
-);
-
-HexDriver reg_to_hex1
-(
-	.in(MDR_OUT[7:4]),
-	.out(HEX1)
-);
-
-HexDriver reg_to_hex2
-(
-	.in(MDR_OUT[11:8]),
-	.out(HEX2)
-);
-
-HexDriver reg_to_hex3
-(
-	.in(MDR_OUT[15:12]),
-	.out(HEX3)
-);
 
 mux4 muxforCPU_bus
 (

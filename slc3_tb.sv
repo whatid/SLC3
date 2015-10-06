@@ -1,8 +1,9 @@
 module slc3_tb
 (
-	input logic Clk, Reset, Run, Continue
+	input logic Clk, Reset, Run, Continue, 
+	input logic [15:0] S
 ); 
-logic [15:0] S;
+
 logic [11:0] LED;
 logic [6:0] HEX0, HEX1, HEX2, HEX3;
 logic CE, UB, LB, OE, WE;
@@ -28,7 +29,7 @@ slc3 fuck
 	.OE(OE), 
 	.WE(WE),
 	.ADDR(mem_address), // 20 bits
-	.mdata(mem_data)  // 16 bits
+	.Data(mem_data)  // 16 bits
 
 );
 

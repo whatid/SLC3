@@ -6,7 +6,6 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/tristate.sv}
-vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/SLC3_2.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/sext.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/register.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/regfile.sv}
@@ -23,9 +22,7 @@ vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/compa
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/alu.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/adder.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/mux4.sv}
-vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/test_memory.sv}
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/slc3.sv}
-vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/slc3_tb.sv}
 
 vlog -sv -work work +incdir+/home/wirjo2/slc3/SLC3 {/home/wirjo2/slc3/SLC3/testbench.sv}
 

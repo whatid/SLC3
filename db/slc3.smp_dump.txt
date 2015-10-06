@@ -1,5 +1,5 @@
 
-State Machine - |slc3|ISDU:state_controller|State
+State Machine - |slc3_tb|slc3:fuck|ISDU:state_controller|State
 Name State.S_16_2 State.S_16_1 State.S_23 State.S_07 State.S_27 State.S_25_2 State.S_25_1 State.S_06 State.S_22 State.S_20 State.S_21 State.S_04 State.S_12 State.S_00 State.S_09 State.S_05 State.S_01 State.S_32 State.S_35 State.S_33_2 State.S_33_1 State.S_18 State.Pause State.Halted 
 State.Halted 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 State.Pause 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 

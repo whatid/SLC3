@@ -80,7 +80,7 @@ module ISDU ( 	input	Clk,
             S_33_2 : 
                 Next_state <= S_35;
             S_35 : 
-                Next_state <= Pause;
+                Next_state <= S_32;
             Pause :
 					if (Continue)
 						Next_state <= S_32; 
@@ -109,7 +109,7 @@ module ISDU ( 	input	Clk,
 					default : 
 					    Next_state <= S_18;
 				endcase
-            S_01 : 
+         S_01 : 
 				Next_state <= S_18;
 			S_05 : 
 				Next_state <= S_18;
