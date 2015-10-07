@@ -22,7 +22,7 @@ Z6 !s92 -sv -work work +incdir+/home/wirjo2/slc3/SLC3 -O0
 !s100 YT@?6VPi3HUBmUELV31:N3
 !s105 adder_sv_unit
 !s85 0
-!s108 1444162910.321580
+!s108 1444167865.660742
 !s107 /home/wirjo2/slc3/SLC3/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/adder.sv|
 !s101 -O0
@@ -45,7 +45,7 @@ R6
 !s100 INh=mORaNVWDRi1mV51K`0
 !s105 alu_sv_unit
 !s85 0
-!s108 1444162910.213723
+!s108 1444167865.488155
 !s107 /home/wirjo2/slc3/SLC3/alu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/alu.sv|
 !s101 -O0
@@ -68,7 +68,7 @@ R6
 !s100 jbkcQ<S[T69zYJK;HFR[E0
 !s105 comparator_sv_unit
 !s85 0
-!s108 1444162910.107485
+!s108 1444167865.319766
 !s107 /home/wirjo2/slc3/SLC3/comparator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/comparator.sv|
 !s101 -O0
@@ -91,7 +91,7 @@ R6
 !s100 ;dJSY5e3dYJIj?=JS1fO_3
 !s105 datapath_sv_unit
 !s85 0
-!s108 1444162909.982615
+!s108 1444167865.087632
 !s107 /home/wirjo2/slc3/SLC3/datapath.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/datapath.sv|
 !s101 -O0
@@ -114,7 +114,7 @@ R6
 !s100 U6d1fN=gZM?jSGXi;XY]E1
 !s105 gencc_sv_unit
 !s85 0
-!s108 1444162909.191155
+!s108 1444167864.924093
 !s107 /home/wirjo2/slc3/SLC3/gencc.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/gencc.sv|
 !s101 -O0
@@ -124,7 +124,7 @@ IV@Sg4h@Wa;1;OO8O8WhAi1
 VihhSjVjLLKi[RIz8BMXUN2
 S1
 R2
-Z7 w1443730445
+w1443730445
 8/home/wirjo2/slc3/SLC3/HexDriver.sv
 F/home/wirjo2/slc3/SLC3/HexDriver.sv
 L0 1
@@ -138,7 +138,7 @@ n@hex@driver
 !s100 Y[lPLeG?CE:g3Ai>[86<F2
 !s105 HexDriver_sv_unit
 !s85 0
-!s108 1444162908.987448
+!s108 1444167864.749989
 !s107 /home/wirjo2/slc3/SLC3/HexDriver.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/HexDriver.sv|
 !s101 -O0
@@ -161,17 +161,17 @@ R6
 !s100 D3Y[6i=gQhh7jQP7X_n[V3
 !s105 ir_sv_unit
 !s85 0
-!s108 1444162908.858547
+!s108 1444167863.891434
 !s107 /home/wirjo2/slc3/SLC3/ir.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/ir.sv|
 !s101 -O0
 vISDU
 R1
-I3`>02@ZIHCHjo3hc^<oXh1
+IjV3VWSBGhe;UXXHINhWSI0
 Vjkg@2>dldAlEchckV1COQ3
 S1
 R2
-w1444159250
+w1444167242
 8/home/wirjo2/slc3/SLC3/ISDU.sv
 F/home/wirjo2/slc3/SLC3/ISDU.sv
 L0 17
@@ -182,20 +182,20 @@ R5
 R6
 n@i@s@d@u
 !i10b 1
-!s100 8li0Jgjh0iAnfR61NhEco0
+!s100 Gd=:KEd@<L:YOXSj4;0lb0
 !s105 ISDU_sv_unit
 !s85 0
-!s108 1444162908.662205
+!s108 1444167862.944865
 !s107 /home/wirjo2/slc3/SLC3/ISDU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/ISDU.sv|
 !s101 -O0
 vMem2IO
 R1
-IO4gOeo=;WNh?^BfQ40i2B2
+I@6b`em?90n?[FOKzoD[TA1
 V9KED98i>h_G[6o3:::Jz20
 S1
 R2
-R7
+w1444165393
 8/home/wirjo2/slc3/SLC3/Mem2IO.sv
 F/home/wirjo2/slc3/SLC3/Mem2IO.sv
 L0 15
@@ -206,10 +206,10 @@ R5
 R6
 n@mem2@i@o
 !i10b 1
-!s100 [2V6`^=47UEEX^8VJ15Lc2
+!s100 1F^U4YJk[@=h<h1ah:Rl;0
 !s105 Mem2IO_sv_unit
 !s85 0
-!s108 1444162907.511946
+!s108 1444167862.826715
 !s107 /home/wirjo2/slc3/SLC3/Mem2IO.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/Mem2IO.sv|
 !s101 -O0
@@ -232,7 +232,7 @@ R6
 !s100 BCKJE65E?_1ChmjPk^NKG3
 !s105 mux2_sv_unit
 !s85 0
-!s108 1444162907.364522
+!s108 1444167862.709087
 !s107 /home/wirjo2/slc3/SLC3/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/mux2.sv|
 !s101 -O0
@@ -242,7 +242,7 @@ IW4P=Od5Ce[f4ECDeS_;XH2
 VOjLX2LlYRmHI`;:6lO3PL3
 S1
 R2
-Z8 w1443730448
+Z7 w1443730448
 8/home/wirjo2/slc3/SLC3/mux3.sv
 F/home/wirjo2/slc3/SLC3/mux3.sv
 L0 2
@@ -255,7 +255,7 @@ R6
 !s100 BS5P0ng1YCak9mcUm<lMS0
 !s105 mux3_sv_unit
 !s85 0
-!s108 1444162907.255437
+!s108 1444167862.592113
 !s107 /home/wirjo2/slc3/SLC3/mux3.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/mux3.sv|
 !s101 -O0
@@ -278,7 +278,7 @@ R6
 !s100 Cm^4K:8JSi99mE?GkO6_>0
 !s105 mux4_sv_unit
 !s85 0
-!s108 1444162910.428027
+!s108 1444167867.003079
 !s107 /home/wirjo2/slc3/SLC3/mux4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/mux4.sv|
 !s101 -O0
@@ -288,7 +288,7 @@ I2A;aMnEUo=<ogKK4_kH=o2
 VnDbdCBGfMOj_C;IPfiXJP0
 S1
 R2
-R8
+R7
 8/home/wirjo2/slc3/SLC3/plus1.sv
 F/home/wirjo2/slc3/SLC3/plus1.sv
 L0 1
@@ -301,7 +301,7 @@ R6
 !s100 9APJX[05W8kXRPncOU04B1
 !s105 plus1_sv_unit
 !s85 0
-!s108 1444162907.151219
+!s108 1444167862.458106
 !s107 /home/wirjo2/slc3/SLC3/plus1.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/plus1.sv|
 !s101 -O0
@@ -311,7 +311,7 @@ IFMZigfCVn>81SE6O>9Q7M2
 V`Wb6ocgM=VWm:Fa<3Fznl1
 S1
 R2
-R8
+R7
 8/home/wirjo2/slc3/SLC3/regfile.sv
 F/home/wirjo2/slc3/SLC3/regfile.sv
 L0 1
@@ -324,7 +324,7 @@ R6
 !s100 RMNZ?lVDZkEiJV^gBbAHE0
 !s105 regfile_sv_unit
 !s85 0
-!s108 1444162907.057351
+!s108 1444167861.995446
 !s107 /home/wirjo2/slc3/SLC3/regfile.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/regfile.sv|
 !s101 -O0
@@ -334,7 +334,7 @@ Ioo^?H4zniFZJCHKkEUOHF2
 VVWH2GIcWRQ29K?3;26c491
 S1
 R2
-R8
+R7
 8/home/wirjo2/slc3/SLC3/register.sv
 F/home/wirjo2/slc3/SLC3/register.sv
 L0 1
@@ -347,7 +347,7 @@ R6
 !s100 C[zOZ9[ZY^oQ5SXT81`gK3
 !s105 register_sv_unit
 !s85 0
-!s108 1444162906.950444
+!s108 1444167861.861078
 !s107 /home/wirjo2/slc3/SLC3/register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/register.sv|
 !s101 -O0
@@ -357,7 +357,7 @@ I4D=>e=DQ[j8:94]keAd;<1
 V3e4>Y:C_P^Mie60Db`gSO1
 S1
 R2
-R8
+R7
 8/home/wirjo2/slc3/SLC3/sext.sv
 F/home/wirjo2/slc3/SLC3/sext.sv
 L0 1
@@ -370,7 +370,7 @@ R6
 !s100 iV9oDGbNN=B?:V:<JDEW>0
 !s105 sext_sv_unit
 !s85 0
-!s108 1444162906.830770
+!s108 1444167861.732300
 !s107 /home/wirjo2/slc3/SLC3/sext.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/sext.sv|
 !s101 -O0
@@ -393,7 +393,7 @@ R6
 !s100 ]7j?UVEIUa@X@GNWcnYae1
 !s105 slc3_sv_unit
 !s85 0
-!s108 1444162910.838151
+!s108 1444167868.496333
 !s107 /home/wirjo2/slc3/SLC3/slc3.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/slc3.sv|
 !s101 -O0
@@ -403,17 +403,17 @@ IdDRNHRaHW]A@N6IP2cOWn0
 VdDRNHRaHW]A@N6IP2cOWn0
 S1
 R2
-Z9 w1444090382
-Z10 F/home/wirjo2/slc3/SLC3/SLC3_2.sv
-Z11 8/home/wirjo2/slc3/SLC3/test_memory.sv
-Z12 F/home/wirjo2/slc3/SLC3/test_memory.sv
+Z8 w1444090382
+Z9 F/home/wirjo2/slc3/SLC3/SLC3_2.sv
+Z10 8/home/wirjo2/slc3/SLC3/test_memory.sv
+Z11 F/home/wirjo2/slc3/SLC3/test_memory.sv
 L0 23
 R4
 r1
 31
-Z13 !s108 1444162910.523926
-Z14 !s107 /home/wirjo2/slc3/SLC3/SLC3_2.sv|/home/wirjo2/slc3/SLC3/test_memory.sv|
-Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/test_memory.sv|
+Z12 !s108 1444167868.021053
+Z13 !s107 /home/wirjo2/slc3/SLC3/SLC3_2.sv|/home/wirjo2/slc3/SLC3/test_memory.sv|
+Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/test_memory.sv|
 R5
 R6
 n@s@l@c3_2
@@ -440,13 +440,13 @@ R6
 !s100 M2d^9UE2zZ2enm2ViHOnh0
 !s105 slc3_tb_sv_unit
 !s85 0
-!s108 1444162910.938563
+!s108 1444167868.647892
 !s107 /home/wirjo2/slc3/SLC3/slc3_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/slc3_tb.sv|
 !s101 -O0
 vtest_memory
 R1
-Z16 DXx4 work 6 SLC3_2 0 22 dDRNHRaHW]A@N6IP2cOWn0
+Z15 DXx4 work 6 SLC3_2 0 22 dDRNHRaHW]A@N6IP2cOWn0
 DXx4 work 19 test_memory_sv_unit 0 22 h75I=N6KZWIe=<9n[oH1:1
 VMlGDidiXibbBh?ZnEOB7E1
 r1
@@ -454,14 +454,14 @@ r1
 I3=nI1[]_XhU?MJfDf2Vd73
 S1
 R2
-R9
+R8
+R10
 R11
-R12
 L0 27
 R4
+R12
 R13
 R14
-R15
 R5
 R6
 !s85 0
@@ -471,22 +471,22 @@ R6
 !s101 -O0
 Xtest_memory_sv_unit
 R1
-R16
+R15
 Vh75I=N6KZWIe=<9n[oH1:1
 r1
 31
 Ih75I=N6KZWIe=<9n[oH1:1
 S1
 R2
-R9
-R11
-R12
+R8
 R10
+R11
+R9
 L0 25
 R4
+R12
 R13
 R14
-R15
 R5
 R6
 !s85 0
@@ -497,13 +497,13 @@ R6
 vtestbench
 R1
 !i10b 1
-!s100 KCnkT5CiKC10eT`Ma5B:D1
-IQBo`_8ilV9W5UU2YE9LSh2
+!s100 _IhChnnQk1cS?7Aa8OV5M1
+I8Ccl=3oR9d[B_nP;h4O<z0
 VhGfW:390DM[oDMzegDH9`2
 !s105 testbench_sv_unit
 S1
 R2
-w1444162858
+w1444167508
 8/home/wirjo2/slc3/SLC3/testbench.sv
 F/home/wirjo2/slc3/SLC3/testbench.sv
 L0 1
@@ -511,7 +511,7 @@ R4
 r1
 !s85 0
 31
-!s108 1444162911.060856
+!s108 1444167868.791697
 !s107 /home/wirjo2/slc3/SLC3/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/testbench.sv|
 !s101 -O0
@@ -536,7 +536,7 @@ R6
 !s100 AdcTcVL_5`FeNn<n3PKBC1
 !s105 tristate_sv_unit
 !s85 0
-!s108 1444162904.202450
+!s108 1444167860.901484
 !s107 /home/wirjo2/slc3/SLC3/tristate.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/wirjo2/slc3/SLC3|/home/wirjo2/slc3/SLC3/tristate.sv|
 !s101 -O0

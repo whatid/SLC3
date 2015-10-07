@@ -290,7 +290,9 @@ module ISDU ( 	input	Clk,
 					busMux = 2'b11; 
 				end
 			S_25_1 : 
+				begin
 				Mem_OE = 1'b0;
+				end
 			S_25_2 : 
 				begin 
 					Mem_OE = 1'b0;

@@ -33,9 +33,9 @@ timeprecision 1ns;
 	
 	#3 Run = 0; 
 	#5 Continue = 0;
-   #10 S = 16'h5;
-	#12 Continue = 1;
-	#13 Continue = 0;
+   #30 S = 16'h5;
+	#31 Continue = 1;
+	#32 Continue = 0;
 
 	
 	

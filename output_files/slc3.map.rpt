@@ -1,5 +1,5 @@
 Analysis & Synthesis report for slc3
-Tue Oct  6 15:21:13 2015
+Tue Oct  6 16:34:20 2015
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct  6 15:21:13 2015       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct  6 16:34:20 2015       ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; slc3                                        ;
 ; Top-level Entity Name              ; slc3_tb                                     ;
@@ -706,198 +706,6 @@ Encoding Type:  One-Hot
 ; test_memory:fuckthis|mem_array[61][10]         ; Lost fanout        ;
 ; test_memory:fuckthis|mem_array[62][10]         ; Lost fanout        ;
 ; test_memory:fuckthis|mem_array[63][10]         ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[0][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[1][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[2][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[3][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[4][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[5][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[6][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[7][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[8][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[9][0]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[10][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[11][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[12][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[13][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[14][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[15][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[16][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[17][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[18][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[19][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[20][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[21][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[22][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[23][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[24][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[25][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[26][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[27][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[28][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[29][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[30][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[31][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[32][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[33][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[34][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[35][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[36][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[37][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[38][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[39][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[40][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[41][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[42][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[43][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[44][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[45][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[46][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[47][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[48][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[49][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[50][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[51][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[52][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[53][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[54][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[55][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[56][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[57][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[58][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[59][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[60][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[61][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[62][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[63][0]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[0][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[1][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[2][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[3][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[4][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[5][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[6][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[7][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[8][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[9][6]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[10][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[11][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[12][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[13][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[14][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[15][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[16][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[17][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[18][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[19][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[20][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[21][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[22][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[23][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[24][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[25][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[26][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[27][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[28][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[29][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[30][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[31][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[32][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[33][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[34][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[35][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[36][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[37][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[38][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[39][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[40][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[41][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[42][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[43][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[44][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[45][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[46][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[47][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[48][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[49][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[50][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[51][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[52][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[53][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[54][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[55][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[56][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[57][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[58][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[59][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[60][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[61][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[62][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[63][6]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[0][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[1][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[2][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[3][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[4][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[5][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[6][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[7][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[8][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[9][1]           ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[10][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[11][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[12][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[13][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[14][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[15][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[16][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[17][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[18][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[19][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[20][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[21][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[22][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[23][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[24][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[25][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[26][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[27][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[28][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[29][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[30][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[31][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[32][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[33][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[34][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[35][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[36][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[37][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[38][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[39][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[40][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[41][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[42][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[43][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[44][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[45][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[46][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[47][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[48][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[49][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[50][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[51][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[52][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[53][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[54][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[55][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[56][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[57][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[58][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[59][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[60][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[61][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[62][1]          ; Lost fanout        ;
-; test_memory:fuckthis|mem_array[63][1]          ; Lost fanout        ;
 ; test_memory:fuckthis|mem_array[0][9]           ; Lost fanout        ;
 ; test_memory:fuckthis|mem_array[1][9]           ; Lost fanout        ;
 ; test_memory:fuckthis|mem_array[2][9]           ; Lost fanout        ;
@@ -1346,6 +1154,198 @@ Encoding Type:  One-Hot
 ; test_memory:fuckthis|mem_array[61][2]          ; Lost fanout        ;
 ; test_memory:fuckthis|mem_array[62][2]          ; Lost fanout        ;
 ; test_memory:fuckthis|mem_array[63][2]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[0][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[1][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[2][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[3][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[4][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[5][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[6][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[7][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[8][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[9][1]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[10][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[11][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[12][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[13][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[14][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[15][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[16][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[17][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[18][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[19][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[20][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[21][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[22][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[23][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[24][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[25][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[26][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[27][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[28][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[29][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[30][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[31][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[32][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[33][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[34][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[35][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[36][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[37][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[38][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[39][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[40][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[41][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[42][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[43][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[44][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[45][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[46][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[47][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[48][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[49][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[50][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[51][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[52][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[53][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[54][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[55][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[56][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[57][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[58][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[59][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[60][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[61][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[62][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[63][1]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[0][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[1][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[2][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[3][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[4][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[5][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[6][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[7][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[8][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[9][6]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[10][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[11][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[12][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[13][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[14][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[15][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[16][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[17][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[18][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[19][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[20][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[21][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[22][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[23][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[24][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[25][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[26][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[27][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[28][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[29][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[30][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[31][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[32][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[33][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[34][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[35][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[36][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[37][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[38][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[39][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[40][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[41][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[42][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[43][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[44][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[45][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[46][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[47][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[48][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[49][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[50][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[51][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[52][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[53][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[54][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[55][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[56][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[57][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[58][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[59][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[60][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[61][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[62][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[63][6]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[0][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[1][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[2][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[3][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[4][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[5][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[6][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[7][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[8][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[9][0]           ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[10][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[11][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[12][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[13][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[14][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[15][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[16][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[17][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[18][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[19][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[20][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[21][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[22][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[23][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[24][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[25][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[26][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[27][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[28][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[29][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[30][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[31][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[32][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[33][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[34][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[35][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[36][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[37][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[38][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[39][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[40][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[41][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[42][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[43][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[44][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[45][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[46][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[47][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[48][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[49][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[50][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[51][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[52][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[53][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[54][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[55][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[56][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[57][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[58][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[59][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[60][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[61][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[62][0]          ; Lost fanout        ;
+; test_memory:fuckthis|mem_array[63][0]          ; Lost fanout        ;
 ; slc3:fuck|ISDU:state_controller|State.Halted   ; Lost fanout        ;
 ; slc3:fuck|ISDU:state_controller|State.Pause    ; Lost fanout        ;
 ; slc3:fuck|ISDU:state_controller|State.S_18     ; Lost fanout        ;
@@ -1379,6 +1379,30 @@ Encoding Type:  One-Hot
 +-------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
 ; Register name                             ; Reason for Removal ; Registers Removed due to This Register                                              ;
 +-------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
+; slc3:fuck|ISDU:state_controller|State~7   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:cc|data[2],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|ir:irunit|data[10],                                           ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:cc|data[1], slc3:fuck|datapath:d0|ir:irunit|data[9], ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:cc|data[0],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[8],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[7],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[5],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[4],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[3],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[10],                                         ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[9],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[10],                                        ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[9],                                         ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[8],                                         ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[7],                                         ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[5],                                         ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[4], slc3:fuck|tristate:tr0|b[10],           ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|b[9], slc3:fuck|tristate:tr0|b[8],                           ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|b[7], slc3:fuck|tristate:tr0|b[5],                           ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|b[4], slc3:fuck|tristate:tr0|a[10],                          ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|a[9], slc3:fuck|tristate:tr0|a[8],                           ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|a[7], slc3:fuck|tristate:tr0|a[5],                           ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|a[4], slc3:fuck|ISDU:state_controller|State.S_00,            ;
+;                                           ;                    ; slc3:fuck|ISDU:state_controller|State.S_04                                          ;
 ; slc3:fuck|ISDU:state_controller|State~6   ; Lost Fanouts       ; slc3:fuck|datapath:d0|ir:irunit|data[15], slc3:fuck|datapath:d0|ir:irunit|data[14], ;
 ;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[15],                                         ;
 ;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[15],                                        ;
@@ -1405,26 +1429,6 @@ Encoding Type:  One-Hot
 ;                                           ;                    ; slc3:fuck|ISDU:state_controller|State.S_22,                                         ;
 ;                                           ;                    ; slc3:fuck|ISDU:state_controller|State.S_27,                                         ;
 ;                                           ;                    ; slc3:fuck|ISDU:state_controller|State.S_16_2                                        ;
-; slc3:fuck|ISDU:state_controller|State~7   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:cc|data[2],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|ir:irunit|data[10],                                           ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:cc|data[1], slc3:fuck|datapath:d0|ir:irunit|data[9], ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:cc|data[0],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[6],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[1],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[0],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[10],                                         ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[9],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[10],                                        ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[0],                                         ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[6],                                         ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[1],                                         ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[9], slc3:fuck|tristate:tr0|b[10],           ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|b[0], slc3:fuck|tristate:tr0|b[6],                           ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|b[1], slc3:fuck|tristate:tr0|b[9],                           ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|a[10], slc3:fuck|tristate:tr0|a[0],                          ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|a[6], slc3:fuck|tristate:tr0|a[1],                           ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|a[9], slc3:fuck|ISDU:state_controller|State.S_00,            ;
-;                                           ;                    ; slc3:fuck|ISDU:state_controller|State.S_04                                          ;
 ; slc3:fuck|ISDU:state_controller|State~4   ; Lost Fanouts       ; slc3:fuck|datapath:d0|ir:irunit|data[11],                                           ;
 ;                                           ;                    ; slc3:fuck|datapath:d0|register:pc|data[11],                                         ;
 ;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[11], slc3:fuck|tristate:tr0|b[11],          ;
@@ -1438,23 +1442,19 @@ Encoding Type:  One-Hot
 ; slc3:fuck|datapath:d0|ir:irunit|data[12]  ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:pc|data[12],                                         ;
 ;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[12], slc3:fuck|tristate:tr0|b[12],          ;
 ;                                           ;                    ; slc3:fuck|tristate:tr0|a[12]                                                        ;
-; slc3:fuck|datapath:d0|ir:irunit|data[4]   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:pc|data[4],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[4], slc3:fuck|tristate:tr0|b[4],            ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|a[4]                                                         ;
-; slc3:fuck|datapath:d0|ir:irunit|data[5]   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:pc|data[5],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[5], slc3:fuck|tristate:tr0|b[5],            ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|a[5]                                                         ;
-; slc3:fuck|datapath:d0|ir:irunit|data[3]   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:pc|data[3],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[3], slc3:fuck|tristate:tr0|b[3],            ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|a[3]                                                         ;
 ; slc3:fuck|datapath:d0|ir:irunit|data[2]   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:pc|data[2],                                          ;
 ;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[2], slc3:fuck|tristate:tr0|b[2],            ;
 ;                                           ;                    ; slc3:fuck|tristate:tr0|a[2]                                                         ;
-; slc3:fuck|datapath:d0|ir:irunit|data[8]   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:pc|data[8],                                          ;
-;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[8], slc3:fuck|tristate:tr0|b[8],            ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|a[8]                                                         ;
-; slc3:fuck|datapath:d0|register:pc|data[7] ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:mdr|data[7], slc3:fuck|tristate:tr0|b[7],            ;
-;                                           ;                    ; slc3:fuck|tristate:tr0|a[7]                                                         ;
+; slc3:fuck|datapath:d0|ir:irunit|data[1]   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:pc|data[1],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[1], slc3:fuck|tristate:tr0|b[1],            ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|a[1]                                                         ;
+; slc3:fuck|datapath:d0|ir:irunit|data[0]   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:pc|data[0],                                          ;
+;                                           ;                    ; slc3:fuck|datapath:d0|register:mdr|data[0], slc3:fuck|tristate:tr0|b[0],            ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|a[0]                                                         ;
+; slc3:fuck|datapath:d0|ir:irunit|data[3]   ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:mdr|data[3], slc3:fuck|tristate:tr0|b[3],            ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|a[3]                                                         ;
+; slc3:fuck|datapath:d0|register:pc|data[6] ; Lost Fanouts       ; slc3:fuck|datapath:d0|register:mdr|data[6], slc3:fuck|tristate:tr0|b[6],            ;
+;                                           ;                    ; slc3:fuck|tristate:tr0|a[6]                                                         ;
 ; slc3:fuck|ISDU:state_controller|State~5   ; Lost Fanouts       ; slc3:fuck|ISDU:state_controller|State.S_25_1,                                       ;
 ;                                           ;                    ; slc3:fuck|ISDU:state_controller|State.S_23                                          ;
 +-------------------------------------------+--------------------+-------------------------------------------------------------------------------------+
@@ -1483,8 +1483,8 @@ Encoding Type:  One-Hot
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |slc3_tb|slc3:fuck|datapath:d0|register:pc|data[12]  ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |slc3_tb|slc3:fuck|datapath:d0|register:mdr|data[10] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |slc3_tb|slc3:fuck|datapath:d0|mux3:adder2mux|Mux6   ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |slc3_tb|slc3:fuck|mux4:muxforCPU_bus|Mux15          ;
-; 256:1              ; 16 bits   ; 2720 LEs      ; 1664 LEs             ; 1056 LEs               ; No         ; |slc3_tb|test_memory:fuckthis|Mux9                   ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |slc3_tb|slc3:fuck|mux4:muxforCPU_bus|Mux6           ;
+; 256:1              ; 16 bits   ; 2720 LEs      ; 1664 LEs             ; 1056 LEs               ; No         ; |slc3_tb|test_memory:fuckthis|Mux0                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -1778,7 +1778,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1788,7 +1788,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Tue Oct  6 15:21:01 2015
+    Info: Processing started: Tue Oct  6 16:34:08 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off slc3 -c slc3
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
@@ -1861,6 +1861,7 @@ Info (12128): Elaborating entity "register" for hierarchy "slc3:fuck|datapath:d0
 Info (12128): Elaborating entity "comparator" for hierarchy "slc3:fuck|datapath:d0|comparator:nzpcomparator"
 Info (12128): Elaborating entity "tristate" for hierarchy "slc3:fuck|tristate:tr0"
 Info (12128): Elaborating entity "Mem2IO" for hierarchy "slc3:fuck|Mem2IO:memory_subsystem"
+Critical Warning (10237): Verilog HDL warning at Mem2IO.sv(45): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
 Info (12128): Elaborating entity "ISDU" for hierarchy "slc3:fuck|ISDU:state_controller"
 Info (12128): Elaborating entity "test_memory" for hierarchy "test_memory:fuckthis"
 Warning (10230): Verilog HDL assignment warning at SLC3_2.sv(110): truncated value with size 32 to match size of target (5)
@@ -4953,9 +4954,6 @@ Warning (21074): Design contains 20 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "S[12]"
     Warning (15610): No output dependent on input pin "S[11]"
     Warning (15610): No output dependent on input pin "S[10]"
-    Warning (15610): No output dependent on input pin "S[0]"
-    Warning (15610): No output dependent on input pin "S[6]"
-    Warning (15610): No output dependent on input pin "S[1]"
     Warning (15610): No output dependent on input pin "S[9]"
     Warning (15610): No output dependent on input pin "S[8]"
     Warning (15610): No output dependent on input pin "S[7]"
@@ -4963,14 +4961,17 @@ Warning (21074): Design contains 20 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "S[4]"
     Warning (15610): No output dependent on input pin "S[3]"
     Warning (15610): No output dependent on input pin "S[2]"
+    Warning (15610): No output dependent on input pin "S[1]"
+    Warning (15610): No output dependent on input pin "S[6]"
+    Warning (15610): No output dependent on input pin "S[0]"
 Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 380 megabytes
-    Info: Processing ended: Tue Oct  6 15:21:13 2015
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 392 megabytes
+    Info: Processing ended: Tue Oct  6 16:34:23 2015
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+

@@ -175,16 +175,6 @@
 # Loading work.test_memory
 # 
 # add wave *
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
-# ** Error: Cannot lock WLF file: "vsim.wlf"
-#           errno 11: Resource temporarily unavailable.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: wirjo2  Hostname: linux-a2.ews.illinois.edu  ProcessID: 6315
-#           Attempting to use alternate WLF file "./wlft18xIsS".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft18xIsS
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -192,7 +182,43 @@
 # run 1000 ns
 # Unknown aluop
 do wave.do
-restart -f; run 5000ns
+restart -f; run 3000ns
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.slc3_tb
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.mux4
+# Loading work.datapath
+# Loading work.mux3
+# Loading work.mux2
+# Loading work.sext
+# Loading work.adder
+# Loading work.register
+# Loading work.plus1
+# Loading work.ir
+# Loading work.alu
+# Loading work.regfile
+# Loading work.gencc
+# Loading work.comparator
+# Loading work.tristate
+# Loading work.Mem2IO
+# Loading work.ISDU
+# Loading work.SLC3_2
+# Loading work.test_memory_sv_unit
+# Loading work.test_memory
+# Unknown aluop
+add wave -position insertpoint  \
+sim:/testbench/processor/mem_data
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/testbench/processor/fuck/d0/MDR_OUT
+add wave -position insertpoint  \
+sim:/testbench/processor/fuck/d0/MDR_OUT
+add wave -position insertpoint  \
+sim:/testbench/processor/fuck/d0/MAR
+restart -f; run 3000ns
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.slc3_tb
@@ -220,41 +246,7 @@ restart -f; run 5000ns
 # Unknown aluop
 add wave -position insertpoint  \
 sim:/testbench/processor/fuck/memory_subsystem/hex_data
-restart -f; run 5000ns
-# Loading sv_std.std
-# Loading work.testbench
-# Loading work.slc3_tb
-# Loading work.slc3
-# Loading work.HexDriver
-# Loading work.mux4
-# Loading work.datapath
-# Loading work.mux3
-# Loading work.mux2
-# Loading work.sext
-# Loading work.adder
-# Loading work.register
-# Loading work.plus1
-# Loading work.ir
-# Loading work.alu
-# Loading work.regfile
-# Loading work.gencc
-# Loading work.comparator
-# Loading work.tristate
-# Loading work.Mem2IO
-# Loading work.ISDU
-# Loading work.SLC3_2
-# Loading work.test_memory_sv_unit
-# Loading work.test_memory
-# Unknown aluop
-add wave -position insertpoint  \
-sim:/testbench/processor/HEX0
-add wave -position insertpoint  \
-sim:/testbench/processor/HEX1
-add wave -position insertpoint  \
-sim:/testbench/processor/HEX2
-add wave -position insertpoint  \
-sim:/testbench/processor/HEX3
-restart -f; run 5000ns
+restart -f; run 3000ns
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.slc3_tb

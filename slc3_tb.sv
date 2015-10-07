@@ -10,7 +10,7 @@ logic CE, UB, LB, OE, WE;
 logic [19:0] mem_address;
 wire [15:0] mem_data; //tristate buffers need to be of type wire
 
-slc3 fuck
+slc3 cpu
 (
 
 	.S,
@@ -33,7 +33,7 @@ slc3 fuck
 
 );
 
-test_memory fuckthis
+test_memory memory
 (
 	.Clk,
 	.Reset, 

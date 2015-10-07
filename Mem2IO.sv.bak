@@ -36,12 +36,10 @@ module  Mem2IO ( 	input Clk, Reset,
 	assign Data_Mem_Out = ~WE ? Data_CPU_In : 16'd0;
    
 	always_ff @ (posedge Clk or posedge Reset ) begin 
-		/*
 		if (Reset) 
 			hex_data <= 16'd0;
 		else 
-		*/
-			//if ( ~WE & (A[15:0] == 16'hFFFF) ) 
+			if ( ~WE & (A[15:0] == 16'hFFFF) ) 
 				hex_data <= Data_CPU_In;
     end
        
